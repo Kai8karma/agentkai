@@ -1,21 +1,21 @@
 # Agent Kai
 
-> GTM engineering as tested code. Agent Kai runs a tested, open-source GTM engine on your CRM to recover the revenue trapped in broken pipeline data — on your own infrastructure, with zero data egress.
+> GTM engineering as tested code. Agent Kai runs a tested, open-source GTM engine on your CRM to recover the revenue trapped in broken pipeline data, on your own infrastructure, with zero data egress.
 
-Agent Kai is a solo GTM-engineering firm. The flagship offer, Pipeline Recovery, finds dead pipeline, dedupes and re-enriches CRM data, repairs lead routing, and re-ranks accounts by recoverable revenue. It runs on a public, MIT-licensed decision engine (kaikarma-gtm-engine, 774 passing tests) executed on the client's own infrastructure, so customer data never leaves their VPC. Ideal for US/EU B2B SaaS teams (≈50–1000 employees) on HubSpot or Salesforce with a rotted CRM.
+Agent Kai is a solo GTM-engineering firm. The flagship offer, Pipeline Recovery, finds dead pipeline, dedupes and re-enriches CRM data, repairs lead routing, and re-ranks accounts by recoverable revenue. It runs on a public, MIT-licensed decision engine (kaikarma-gtm-engine, 774 passing tests) executed on the client's own infrastructure, so customer data never leaves their VPC. Ideal for US/EU B2B SaaS teams (50 to 1000 employees) on HubSpot or Salesforce with a rotted CRM.
 
 ## Offer
 
-- Pipeline Audit: $3,000 fixed, 2 weeks. A quantified recovery report — how much pipeline is recoverable, where it leaks, ranked by dollars. The fee is credited into month one.
+- Pipeline Audit: $3,000 fixed, 2 weeks. A quantified recovery report: how much pipeline is recoverable, where it leaks, ranked by dollars. The fee is credited into month one.
 - Pipeline Recovery retainer: $10,000/month, month-to-month. Clean, enrich, re-route, reactivate dormant accounts, and report recovered pipeline monthly. Cancel anytime.
 - Guarantee: if the audit doesn't surface at least 10× its fee in recoverable pipeline, it's free.
 
 ## How it works
 
-- Score accounts as a tested function (firmographic, technographic, signal, fit) — not a 100-point spreadsheet.
+- Score accounts as a tested function (firmographic, technographic, signal, fit), not a 100-point spreadsheet.
 - Control paid spend under hard caps; route leads by data-quality score and SLA.
 - Learn from closed-won/lost outcomes and re-rank the pipeline.
-- Runs offline, deterministic, on the client's infrastructure — zero data egress. Auditable, tested code rather than a black-box tool.
+- Runs offline, deterministic, on the client's infrastructure, with zero data egress. Auditable, tested code rather than a black-box tool.
 
 ## Differentiators
 

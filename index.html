@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Agent Kai — Pipeline Recovery · GTM engineering as tested code</title>
-<meta name="description" content="Recover the revenue trapped in your broken CRM. A tested, open-source GTM engine, run on your data. Runs on your infra — your data never leaves." />
+<title>Agent Kai · Pipeline Recovery · GTM engineering as tested code</title>
+<meta name="description" content="Recover the revenue trapped in your broken CRM. A tested, open-source GTM engine, run on your data. Runs on your infra. Your data never leaves." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
@@ -37,7 +37,7 @@
     line-height: 1.55;
     overflow-x: hidden;
   }
-  /* 4% grain overlay — never removed */
+  /* 4% grain overlay - never removed */
   body::before {
     content: "";
     position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.04;
@@ -221,7 +221,7 @@
   .reveal.in { opacity: 1; transform: none; }
   /* above-the-fold must never depend on JS to be visible */
   .hero .reveal { opacity: 1; transform: none; }
-  /* ───────── awwwards pass — refs: linear.app (perspective product panel) · ashpdeep.com gradient-ribbon (luminous flow on black) · bento (giant ghost wordmark) ───────── */
+  /* ───────── awwwards pass - refs: linear.app (perspective product panel) · ashpdeep.com gradient-ribbon (luminous flow on black) · bento (giant ghost wordmark) ───────── */
   #flow { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.6; mix-blend-mode: screen; }
   .hero::before { z-index: 0; }
   .hero .wrap { z-index: 2; }
@@ -247,11 +247,11 @@
   /* giant closing wordmark (bento ghost-text move) */
   .bigmark { font-weight: 800; font-size: clamp(56px, 16vw, 188px); line-height: 0.9; letter-spacing: -0.045em; padding: 28px 32px 10px; max-width: 1120px; margin: 0 auto; white-space: nowrap; color: var(--ink); }
   .bigmark .s { color: var(--accent); }
-  /* ───────── Apple-grade polish — optical type · materials · spring motion ───────── */
+  /* ───────── Apple-grade polish - optical type · materials · spring motion ───────── */
   :root { --ease: cubic-bezier(0.16, 1, 0.3, 1); --ease-out: cubic-bezier(0.22, 1, 0.36, 1); }
   html { -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; scroll-padding-top: 84px; }
   body { font-optical-sizing: auto; }
-  /* no orphan/widow lines — the Apple tell */
+  /* no orphan/widow lines - the Apple tell */
   h1, h2, .bigmark, .card h3, .step h3, .guarantee h3, .strip .big h3 { text-wrap: balance; }
   .lede, .sec-lede, .card p, .step p, .guarantee p { text-wrap: pretty; }
   h1 { letter-spacing: -0.028em; }
@@ -267,7 +267,7 @@
   /* precise, top-lit primary CTA */
   .btn-primary { background: linear-gradient(180deg, #14c187, #10b981); box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 1px 2px rgba(0,0,0,0.3), 0 10px 26px -12px rgba(16,185,129,0.4); }
   .btn-primary:hover { transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.28), 0 14px 34px -10px rgba(16,185,129,0.55); }
-  /* fix: nav CTA label inherited muted grey from `.navlinks a` (it out-specified .btn-primary) — force crisp dark */
+  /* fix: nav CTA label inherited muted grey from `.navlinks a` (it out-specified .btn-primary) - force crisp dark */
   .navlinks a.navcta { color: #04130d; }
   /* truer hairlines + calmer grain */
   .divider { background: rgba(255,255,255,0.055); }
@@ -295,7 +295,7 @@
   <div class="wrap">
     <div class="kicker reveal"><span class="sq"></span> GTM ENGINEERING · AS TESTED CODE</div>
     <h1 class="reveal">Recover the <span class="hl">revenue trapped</span> in your broken CRM.</h1>
-    <p class="lede reveal">Your team didn't lose the pipeline — it's rotting in the data. <b>Pipeline Recovery</b> runs a tested, open-source GTM engine on your CRM: finds the dead pipeline, clears the rot, re-ranks who to chase. <b>Runs on your infrastructure. Your data never leaves.</b></p>
+    <p class="lede reveal">The pipeline you already built is sitting in your CRM, rotting. <b>Pipeline Recovery</b> runs a tested, open-source GTM engine on your data. It finds the dead accounts, clears the duplicates, and re-ranks who to chase. <b>It runs on your infrastructure. Your data never leaves.</b></p>
     <div class="hero-cta reveal">
       <a class="btn btn-primary" href="#book">Book a pipeline audit →</a>
       <a class="btn btn-ghost" href="https://github.com/Kai8karma/kaikarma-gtm-engine" target="_blank" rel="noopener" aria-label="See the open-source GTM engine on GitHub">See the engine ↗</a>
@@ -338,11 +338,11 @@
   <div class="wrap">
     <div class="eyebrow reveal"><span class="idx">01</span>The leak</div>
     <h2 class="reveal">You already <span class="hl">paid</span> to generate this pipeline. It's stuck in the CRM.</h2>
-    <p class="sec-lede reveal">Ad spend, SDR hours, tooling — the cost is sunk. Then the data rots and the return walks out the door. Buying another enrichment tool just scales the breakage faster.</p>
+    <p class="sec-lede reveal">You already spent on the ad clicks, the SDR hours, the tooling. Then the data rots and that spend stops returning anything. Buying another enrichment tool just scales the breakage.</p>
     <div class="bento">
       <div class="card reveal"><div class="ic mono">// dead_records</div><h3>Reps chasing ghosts</h3><p>Dead accounts and stale contacts still sit in active queues. Time burns on records that will never convert.</p></div>
       <div class="card reveal"><div class="ic mono">// duplicates</div><h3>One buyer, split in two</h3><p>Duplicate accounts fracture a single buyer across reps and reports. Forecast lies; attribution breaks.</p></div>
-      <div class="card reveal"><div class="ic mono">// mis_routing</div><h3>Leads routed to no one</h3><p>The right account lands on the wrong rep — or nobody. SLA blown, intent gone cold before first touch.</p></div>
+      <div class="card reveal"><div class="ic mono">// mis_routing</div><h3>Leads routed to no one</h3><p>The right account lands on the wrong rep, or no one at all. The SLA blows, and intent goes cold before first touch.</p></div>
       <div class="card reveal"><div class="ic mono">// decay</div><h3>Enrichment that expired</h3><p>Firmographics from 18 months ago drive today's targeting. You're scoring accounts on a snapshot that no longer exists.</p></div>
     </div>
   </div>
@@ -361,14 +361,14 @@
         <div class="n mono">STEP 01 · 2 WEEKS</div>
         <h3>Pipeline Audit</h3>
         <div class="price mono">$3,000 · fixed</div>
-        <p>We scan your CRM and hand you a quantified recovery report: how much pipeline is recoverable, where it's leaking, ranked by dollars. Yours to keep — continue or not.</p>
+        <p>We scan your CRM and hand you a quantified recovery report: how much pipeline is recoverable, where it's leaking, ranked by dollars. It's yours to keep whether you continue or not.</p>
         <div class="credit mono">→ fee credited into month one</div>
       </div>
       <div class="step reveal">
         <div class="n mono">STEP 02 · MONTH-TO-MONTH</div>
         <h3>Pipeline Recovery</h3>
         <div class="price mono">$10,000 / month</div>
-        <p>We fix it and keep it fixed — dedupe, enrich, re-route, reactivate dormant accounts, and report recovered pipeline monthly. Cancel any month.</p>
+        <p>We fix it and keep it clean: dedupe, enrich, re-route, reactivate dormant accounts, and report recovered pipeline every month. Cancel any month.</p>
         <div class="credit mono">→ built on the open-source engine, run on your infra</div>
       </div>
     </div>
@@ -381,11 +381,11 @@
 <section id="why">
   <div class="wrap">
     <div class="eyebrow reveal"><span class="idx">03</span>Why this, not a tool</div>
-    <h2 class="reveal">Tested code you can <span class="hl">audit</span> — not a subscription.</h2>
+    <h2 class="reveal">Tested code you can <span class="hl">read</span> and audit.</h2>
     <div class="diffs">
-      <div class="card reveal"><div class="ic mono">// open_source</div><h3>Open-source &amp; tested</h3><p>The decision engine is public, MIT, 774 passing tests. The logic isn't a pitch deck — it's running code you can read.</p></div>
+      <div class="card reveal"><div class="ic mono">// open_source</div><h3>Open-source and tested</h3><p>The decision engine is public, MIT-licensed, and covered by 774 passing tests. You can read exactly how it scores and decides.</p></div>
       <div class="card reveal"><div class="ic mono">// zero_egress</div><h3>Zero data egress</h3><p>The engine runs on your infrastructure. Your customer data never goes to a third-party vendor's servers. Built for security review and DPAs.</p></div>
-      <div class="card reveal"><div class="ic mono">// revenue_first</div><h3>Revenue, not hygiene</h3><p>We don't bill for dedupe theater. Every engagement is measured in recovered pipeline — dollars back in the funnel.</p></div>
+      <div class="card reveal"><div class="ic mono">// revenue_first</div><h3>Revenue, not hygiene</h3><p>We don't bill for dedupe counts. Every engagement is measured one way: recovered pipeline, in dollars.</p></div>
     </div>
   </div>
 </section>
@@ -400,8 +400,8 @@
     <p class="sec-lede reveal">You see the recovered-pipeline number on your own data before the retainer starts. Until then, here's what's already public.</p>
     <div class="strip">
       <div class="big reveal">
-        <h3 style="font-size:18px;font-weight:800;">kaikarma-gtm-engine — public &amp; auditable</h3>
-        <p style="margin-top:10px;color:var(--muted);font-weight:300;font-size:14.5px;max-width:48ch;">The same decision engine that powers every engagement. Score accounts, control spend under caps, route leads, learn from outcomes — all offline, all tested.</p>
+        <h3 style="font-size:18px;font-weight:800;">kaikarma-gtm-engine, public and auditable</h3>
+        <p style="margin-top:10px;color:var(--muted);font-weight:300;font-size:14.5px;max-width:48ch;">The same decision engine behind every engagement. It scores accounts, controls spend under caps, routes leads, and learns from outcomes. Offline and tested.</p>
         <div class="row">
           <div class="stat"><div class="v">774</div><div class="l">passing tests</div></div>
           <div class="stat"><div class="v">5</div><div class="l">engine pillars</div></div>
@@ -413,7 +413,7 @@
       <div class="guarantee reveal">
         <div class="ic mono" style="color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:12px;margin-bottom:12px;">// guarantee</div>
         <h3>Find 10× the fee, or it's free.</h3>
-        <p>If the audit doesn't surface at least <b style="color:var(--ink);font-weight:500;">10× its cost</b> in recoverable pipeline, you pay nothing. The retainer is month-to-month — cancel any month, no lock-in.</p>
+        <p>If the audit doesn't surface at least <b style="color:var(--ink);font-weight:500;">10× its cost</b> in recoverable pipeline, you pay nothing. The retainer runs month to month. Cancel any month, no lock-in.</p>
       </div>
     </div>
   </div>
@@ -423,9 +423,9 @@
 <section class="cta-final" id="book">
   <div class="wrap">
     <h2 class="reveal">See what your CRM is hiding.</h2>
-    <p class="sec-lede reveal">A two-week audit, a quantified number, zero risk. Find out how much pipeline is recoverable before you spend a rupee — or a dollar — on fixing it.</p>
+    <p class="sec-lede reveal">A two-week audit, a real number, no risk. See how much pipeline you can recover before you pay anything to fix it.</p>
     <div class="row reveal">
-      <a class="btn btn-primary" href="mailto:kai8karma@gmail.com?subject=Pipeline%20Audit%20—%20inquiry&body=Hi%20Kai%2C%20we%27d%20like%20a%20pipeline%20audit.%20CRM%3A%20%5BHubSpot%2FSalesforce%5D.%20Team%20size%3A%20%5B%5D.">Book a pipeline audit →</a>
+      <a class="btn btn-primary" href="mailto:kai8karma@gmail.com?subject=Pipeline%20Audit%20inquiry&body=Hi%20Kai%2C%20we%27d%20like%20a%20pipeline%20audit.%20CRM%3A%20%5BHubSpot%2FSalesforce%5D.%20Team%20size%3A%20%5B%5D.">Book a pipeline audit →</a>
       <a class="btn btn-ghost" href="https://github.com/Kai8karma/kaikarma-gtm-engine" target="_blank" rel="noopener" aria-label="See the open-source GTM engine on GitHub">See the engine ↗</a>
     </div>
   </div>
@@ -437,7 +437,6 @@
   <div class="bigmark">Agent <span class="s">Kai</span></div>
   <div class="wrap">
     <div class="wordmark">Agent <span class="s">Kai</span></div>
-    <div class="mono">GTM engineering as tested code · built on kaikarma-gtm-engine</div>
     <a class="flink" href="https://github.com/Kai8karma/kaikarma-gtm-engine" target="_blank" rel="noopener" aria-label="Agent Kai GTM engine repository on GitHub">github ↗</a>
   </div>
 </footer>
@@ -468,7 +467,7 @@
     { t: '<span class="flag">⚑ 1 duplicate detected → merged (SignalFirst)</span>', d: 480 },
     { t: '<span class="flag">⚑ 3 high-fit accounts dormant &gt;180d → unworked</span>', d: 520 },
     { t: '<span class="g">→ re-ranking pipeline by recoverable value…</span>', d: 560 },
-    { t: '<span class="ok">✓ scan complete — recoverable pipeline surfaced</span>', d: 300 },
+    { t: '<span class="ok">✓ scan complete · recoverable pipeline surfaced</span>', d: 300 },
   ];
 
   const term = document.getElementById("term");
@@ -480,7 +479,7 @@
 
   function runDemo() {
     if (started) return; started = true;
-    // payoff (re-ranked accounts + recovered $) renders fast — NOT gated on the terminal flavor
+    // payoff (re-ranked accounts + recovered $) renders fast - NOT gated on the terminal flavor
     setTimeout(renderAccounts, 650);
     let i = 0;
     function next() {
@@ -505,7 +504,7 @@
       const row = document.createElement("div");
       row.className = "acct";
       const tg = tier(a.s);
-      const moved = a.rec > 0 ? '<span class="move" style="">▲ recover</span>' : '<span class="move">—</span>';
+      const moved = a.rec > 0 ? '<span class="move" style="">▲ recover</span>' : '<span class="move">-</span>';
       row.innerHTML =
         '<div class="nm">' + a.nm + '<small>' + a.meta + '</small></div>' +
         '<span class="tier ' + tg + '">' + tg + ' · ' + a.s + '</span>' +
@@ -536,7 +535,7 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-  // the demo sits high on the page — guarantee it runs even without a scroll
+  // the demo sits high on the page - guarantee it runs even without a scroll
   window.addEventListener("load", () => setTimeout(runDemo, 500));
 </script>
 <script>
