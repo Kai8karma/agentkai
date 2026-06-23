@@ -247,6 +247,29 @@
   /* giant closing wordmark (bento ghost-text move) */
   .bigmark { font-weight: 800; font-size: clamp(56px, 16vw, 188px); line-height: 0.9; letter-spacing: -0.045em; padding: 28px 32px 10px; max-width: 1120px; margin: 0 auto; white-space: nowrap; color: var(--ink); }
   .bigmark .s { color: var(--accent); }
+  /* ───────── Apple-grade polish — optical type · materials · spring motion ───────── */
+  :root { --ease: cubic-bezier(0.16, 1, 0.3, 1); --ease-out: cubic-bezier(0.22, 1, 0.36, 1); }
+  html { -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; scroll-padding-top: 84px; }
+  body { font-optical-sizing: auto; }
+  /* no orphan/widow lines — the Apple tell */
+  h1, h2, .bigmark, .card h3, .step h3, .guarantee h3, .strip .big h3 { text-wrap: balance; }
+  .lede, .sec-lede, .card p, .step p, .guarantee p { text-wrap: pretty; }
+  h1 { letter-spacing: -0.028em; }
+  section { padding: 90px 0; }
+  /* material: lit-from-above hairline + soft layered shadow */
+  .card, .step, .strip .big, .guarantee { box-shadow: inset 0 1px 0 rgba(255,255,255,0.045), 0 1px 2px rgba(0,0,0,0.35); }
+  .card, .step { border-radius: 18px; }
+  .console { box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 30px 80px -42px rgba(0,0,0,0.85), 0 8px 22px -16px rgba(0,0,0,0.55); }
+  /* spring-out motion */
+  .reveal { transition: opacity .8s var(--ease), transform .8s var(--ease), filter .8s var(--ease); }
+  .console { transition: transform 1.3s var(--ease), box-shadow 1.3s var(--ease); }
+  .btn { transition: transform .22s var(--ease-out), box-shadow .28s var(--ease-out), background .28s var(--ease-out); }
+  /* precise, top-lit primary CTA */
+  .btn-primary { background: linear-gradient(180deg, #1ad093, #10b981); box-shadow: inset 0 1px 0 rgba(255,255,255,0.28), 0 1px 2px rgba(0,0,0,0.3), 0 10px 26px -12px rgba(16,185,129,0.45); }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.34), 0 14px 34px -10px rgba(16,185,129,0.58); }
+  /* truer hairlines + calmer grain */
+  .divider { background: rgba(255,255,255,0.055); }
+  body::before { opacity: 0.032; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; filter: none; } .term .ln { transition: none; } h1 { animation: none; } .console { transform: none; } #flow { display: none; } }
 </style>
 </head>
