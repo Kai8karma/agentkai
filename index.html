@@ -4,24 +4,24 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Agent Kai · Pipeline Recovery · GTM engineering as tested code</title>
-<meta name="description" content="Recover the revenue trapped in your broken CRM. A tested, open-source GTM engine, run on your data. Runs on your infra. Your data never leaves." />
+<meta name="description" content="Recover the revenue trapped in your broken CRM. A tested, deterministic GTM engine, run on your data. Runs on your infra. Your data never leaves." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0a0f0d" />
 <link rel="canonical" href="https://kai8karma.github.io/agentkai/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Agent Kai" />
 <meta property="og:title" content="Agent Kai · Pipeline Recovery" />
-<meta property="og:description" content="Recover the revenue trapped in your broken CRM. A tested, open-source GTM engine, run on your data, with zero data egress." />
+<meta property="og:description" content="Recover the revenue trapped in your broken CRM. A tested, deterministic GTM engine, run on your data, with zero data egress." />
 <meta property="og:url" content="https://kai8karma.github.io/agentkai/" />
 <meta property="og:image" content="https://kai8karma.github.io/agentkai/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Agent Kai · Pipeline Recovery" />
-<meta name="twitter:description" content="Recover the revenue trapped in your broken CRM. Tested, open-source GTM engine. Zero data egress." />
+<meta name="twitter:description" content="Recover the revenue trapped in your broken CRM. Tested, deterministic GTM engine. Zero data egress." />
 <meta name="twitter:image" content="https://kai8karma.github.io/agentkai/og.png" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Agent Kai","description":"GTM engineering as tested code. Agent Kai runs a tested, open-source GTM engine on your CRM to recover the revenue trapped in broken pipeline data, on your own infrastructure, with zero data egress.","url":"https://kai8karma.github.io/agentkai/","image":"https://kai8karma.github.io/agentkai/og.png","founder":{"@type":"Person","name":"Kai","sameAs":["https://github.com/Kai8karma"]},"serviceType":["GTM engineering","Revenue operations","CRM data recovery"],"areaServed":["United States","European Union"],"knowsAbout":["GTM engineering","Revenue operations","CRM data quality","Pipeline recovery","Lead routing","Account scoring","Zero data egress"],"makesOffer":[{"@type":"Offer","name":"Pipeline Audit","price":"3000","priceCurrency":"USD","description":"A two-week quantified CRM recovery report, ranked by recoverable dollars."},{"@type":"Offer","name":"Pipeline Recovery retainer","price":"10000","priceCurrency":"USD","description":"Monthly GTM data recovery, run on the client's own infrastructure."}],"sameAs":["https://github.com/Kai8karma/kaikarma-gtm-engine","https://github.com/Kai8karma"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Agent Kai","description":"GTM engineering as tested code. Agent Kai runs a tested, deterministic GTM engine on your CRM to recover the revenue trapped in broken pipeline data, on your own infrastructure, with zero data egress.","url":"https://kai8karma.github.io/agentkai/","image":"https://kai8karma.github.io/agentkai/og.png","founder":{"@type":"Person","name":"Kai","sameAs":["https://github.com/Kai8karma"]},"serviceType":["GTM engineering","Revenue operations","CRM data recovery"],"areaServed":["United States","European Union"],"knowsAbout":["GTM engineering","Revenue operations","CRM data quality","Pipeline recovery","Lead routing","Account scoring","Zero data egress"],"makesOffer":[{"@type":"Offer","name":"Pipeline Audit","price":"3000","priceCurrency":"USD","description":"A two-week quantified CRM recovery report, ranked by recoverable dollars."},{"@type":"Offer","name":"Pipeline Recovery retainer","price":"10000","priceCurrency":"USD","description":"Monthly GTM data recovery, run on the client's own infrastructure."}],"sameAs":["https://github.com/Kai8karma"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,7 +49,7 @@
   body {
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif;
     font-feature-settings: 'ss01', 'cv11';
     -webkit-font-smoothing: antialiased;
     line-height: 1.55;
@@ -61,7 +61,7 @@
     position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.04;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .mono { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', ui-monospace, monospace; }
 
   a { color: inherit; text-decoration: none; }
   ::selection { background: var(--accent); color: #04120c; }
@@ -76,13 +76,13 @@
     border-bottom: 1px solid var(--line-2);
   }
   nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-  .wordmark { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; }
+  .wordmark { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; }
   .wordmark .s { color: var(--accent); }
   .navlinks { display: flex; align-items: center; gap: 34px; }
   .navlinks a { font-size: 14px; color: #a7b1ac; transition: color .18s; }
   .navlinks a:hover { color: var(--ink); }
   .btn {
-    font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; letter-spacing: 0.02em;
+    font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; letter-spacing: 0.02em;
     padding: 10px 18px; border-radius: 10px; transition: transform .16s, box-shadow .16s, background .16s;
     display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border: none;
   }
@@ -109,7 +109,7 @@
   }
   .hero .wrap { position: relative; z-index: 1; }
   .kicker {
-    font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12.5px;
+    font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-weight: 700; font-size: 12.5px;
     letter-spacing: 0.22em; color: var(--accent); display: inline-flex; align-items: center; gap: 11px; margin-bottom: 26px;
   }
   .kicker .sq { width: 9px; height: 9px; border-radius: 2px; background: var(--accent); box-shadow: 0 0 14px var(--accent); }
@@ -124,7 +124,7 @@
   .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
   .hero-cta .btn { padding: 14px 24px; font-size: 14px; }
   .trust { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center;
-    font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--muted-2); }
+    font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--muted-2); }
   .trust .dot { color: var(--accent); }
   .trust b { color: var(--muted); font-weight: 500; }
 
@@ -139,13 +139,13 @@
     background: rgba(255,255,255,0.015); }
   .console-bar .dots { display: flex; gap: 7px; }
   .console-bar .dots i { width: 11px; height: 11px; border-radius: 50%; display: block; background: #2a332f; }
-  .console-bar .title { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); margin-left: 8px; }
-  .console-bar .live { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted-2);
+  .console-bar .title { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); margin-left: 8px; }
+  .console-bar .live { margin-left: auto; font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted-2);
     display: inline-flex; align-items: center; gap: 7px; }
   .console-bar .live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
   .console-body { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 0; min-height: 430px; }
   @media (max-width: 760px) { .console-body { grid-template-columns: 1fr; } }
-  .term { padding: 22px 24px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.85;
+  .term { padding: 22px 24px; font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.85;
     border-right: 1px solid var(--line-2); }
   @media (max-width: 760px) { .term { border-right: none; border-bottom: 1px solid var(--line-2); } }
   .term .ln { white-space: pre-wrap; opacity: 0; transform: translateY(3px); transition: opacity .3s, transform .3s; }
@@ -155,26 +155,26 @@
   .term .ok { color: var(--accent-2); }
   .term .flag { color: #ffb38a; }
   .panel-right { padding: 20px 22px; display: flex; flex-direction: column; }
-  .pr-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--muted-2);
+  .pr-label { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--muted-2);
     text-transform: uppercase; margin-bottom: 14px; }
   .acct { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 12px;
     padding: 9px 0; border-bottom: 1px solid var(--line-2); font-size: 13px; }
   .acct .nm { font-weight: 500; }
-  .acct .nm small { display: block; color: var(--muted-2); font-weight: 300; font-size: 11px; font-family: 'JetBrains Mono', monospace; }
-  .tier { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
+  .acct .nm small { display: block; color: var(--muted-2); font-weight: 300; font-size: 11px; font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; }
+  .tier { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
   .tier.A { background: rgba(16,185,129,0.16); color: var(--accent-2); }
   .tier.B { background: rgba(255,255,255,0.06); color: var(--muted); }
   .tier.D { background: rgba(255,120,80,0.12); color: #ffb38a; }
-  .move { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); min-width: 42px; text-align: right; opacity: 0; transition: opacity .4s; }
+  .move { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); min-width: 42px; text-align: right; opacity: 0; transition: opacity .4s; }
   .move.show { opacity: 1; }
   .recovered { margin-top: auto; padding-top: 16px; }
-  .recovered .v { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; color: var(--accent); }
+  .recovered .v { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; color: var(--accent); }
   .recovered .l { font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .demo-foot { margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--muted-2); text-align: center; }
+  .demo-foot { margin-top: 12px; font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--muted-2); text-align: center; }
 
   /* ---------- sections ---------- */
   section { padding: 76px 0; }
-  .eyebrow { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.18em;
+  .eyebrow { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.18em;
     color: var(--accent); text-transform: uppercase; margin-bottom: 18px; }
   h2 { font-weight: 800; font-size: clamp(28px, 4vw, 42px); letter-spacing: -0.03em; line-height: 1.08; max-width: 20ch; }
   h2 .hl { color: var(--accent); }
@@ -187,7 +187,7 @@
   .card { background: var(--panel); border: 1px solid var(--line-2); border-radius: var(--r); padding: 26px 26px 28px;
     transition: border-color .2s, background .2s; }
   .card:hover { border-color: var(--line); background: var(--panel-2); }
-  .card .ic { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); margin-bottom: 14px; }
+  .card .ic { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); margin-bottom: 14px; }
   .card h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; }
   .card p { margin-top: 9px; font-size: 14.5px; font-weight: 300; color: var(--muted); line-height: 1.6; }
 
@@ -195,12 +195,12 @@
   .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 44px; }
   @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
   .step { position: relative; background: var(--panel); border: 1px solid var(--line-2); border-radius: var(--r); padding: 30px; }
-  .step .n { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.1em;
+  .step .n { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 0.1em;
     color: var(--accent); margin-bottom: 16px; }
   .step h3 { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; }
-  .step .price { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px; color: var(--accent-2); margin-top: 4px; }
+  .step .price { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-weight: 700; font-size: 15px; color: var(--accent-2); margin-top: 4px; }
   .step p { margin-top: 14px; font-size: 14.5px; font-weight: 300; color: var(--muted); line-height: 1.62; }
-  .step .credit { margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted-2);
+  .step .credit { margin-top: 16px; font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted-2);
     padding-top: 14px; border-top: 1px solid var(--line-2); }
 
   /* diff list */
@@ -212,7 +212,7 @@
   @media (max-width: 720px) { .strip { grid-template-columns: 1fr; } }
   .strip .big { background: var(--panel); border: 1px solid var(--line-2); border-radius: var(--r); padding: 32px; }
   .strip .big .row { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 22px; }
-  .stat .v { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; }
+  .stat .v { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-weight: 700; font-size: 30px; letter-spacing: -0.02em; }
   .stat .l { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-2); margin-top: 4px; }
   .guarantee { background: linear-gradient(160deg, rgba(16,185,129,0.10), var(--panel)); border: 1px solid var(--line);
     border-radius: var(--r); padding: 32px; display: flex; flex-direction: column; justify-content: center; }
@@ -252,7 +252,7 @@
   .demo.in .console { transform: none; }
   /* editorial section indices */
   .eyebrow { display: inline-flex; align-items: center; gap: 14px; }
-  .eyebrow .idx { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted-2); letter-spacing: 0.1em; }
+  .eyebrow .idx { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted-2); letter-spacing: 0.1em; }
   .eyebrow .idx::after { content: ""; display: inline-block; width: 26px; height: 1px; background: var(--line); margin-left: 14px; vertical-align: middle; }
   /* magnetic glow follows the cursor across the primary CTA */
   .btn-primary { position: relative; overflow: hidden; }
@@ -313,14 +313,14 @@
   <div class="wrap">
     <div class="kicker reveal"><span class="sq"></span> GTM ENGINEERING · AS TESTED CODE</div>
     <h1 class="reveal">Recover the <span class="hl">revenue trapped</span> in your broken CRM.</h1>
-    <p class="lede reveal">The pipeline you already built is sitting in your CRM, rotting. <b>Pipeline Recovery</b> runs a tested, open-source GTM engine on your data. It finds the dead accounts, clears the duplicates, and re-ranks who to chase. <b>It runs on your infrastructure. Your data never leaves.</b></p>
+    <p class="lede reveal">The pipeline you already built is sitting in your CRM, rotting. <b>Pipeline Recovery</b> runs a tested, deterministic GTM engine on your data. It finds the dead accounts, clears the duplicates, and re-ranks who to chase. <b>It runs on your infrastructure. Your data never leaves.</b></p>
     <div class="hero-cta reveal">
       <a class="btn btn-primary" href="#book">Book a pipeline audit →</a>
-      <a class="btn btn-ghost" href="https://github.com/Kai8karma/kaikarma-gtm-engine" target="_blank" rel="noopener" aria-label="See the open-source GTM engine on GitHub">See the engine ↗</a>
+      <a class="btn btn-ghost" href="#how">How it works →</a>
     </div>
     <div class="trust reveal">
       <span><span class="dot">●</span> <b>774</b> passing tests</span>
-      <span><span class="dot">●</span> <b>MIT</b> open-source</span>
+      <span><span class="dot">●</span> <b>Deterministic</b> engine</span>
       <span><span class="dot">●</span> <b>Zero</b> data egress</span>
     </div>
 
@@ -387,7 +387,7 @@
         <h3>Pipeline Recovery</h3>
         <div class="price mono">$10,000 / month</div>
         <p>We fix it and keep it clean: dedupe, enrich, re-route, reactivate dormant accounts, and report recovered pipeline every month. Cancel any month.</p>
-        <div class="credit mono">→ built on the open-source engine, run on your infra</div>
+        <div class="credit mono">→ the same tested engine, run on your infra</div>
       </div>
     </div>
   </div>
@@ -399,9 +399,9 @@
 <section id="why">
   <div class="wrap">
     <div class="eyebrow reveal"><span class="idx">03</span>Why this, not a tool</div>
-    <h2 class="reveal">Tested code you can <span class="hl">read</span> and audit.</h2>
+    <h2 class="reveal">Engineered and tested. <span class="hl">Not</span> a black box.</h2>
     <div class="diffs">
-      <div class="card reveal"><div class="ic mono">// open_source</div><h3>Open-source and tested</h3><p>The decision engine is public, MIT-licensed, and covered by 774 passing tests. You can read exactly how it scores and decides.</p></div>
+      <div class="card reveal"><div class="ic mono">// deterministic</div><h3>Tested and deterministic</h3><p>The engine is covered by 774 passing tests and runs deterministically. The same inputs produce the same output every time, on numbers you can trace.</p></div>
       <div class="card reveal"><div class="ic mono">// zero_egress</div><h3>Zero data egress</h3><p>The engine runs on your infrastructure. Your customer data never goes to a third-party vendor's servers. Built for security review and DPAs.</p></div>
       <div class="card reveal"><div class="ic mono">// revenue_first</div><h3>Revenue, not hygiene</h3><p>We don't bill for dedupe counts. Every engagement is measured one way: recovered pipeline, in dollars.</p></div>
     </div>
@@ -415,21 +415,21 @@
   <div class="wrap">
     <div class="eyebrow reveal"><span class="idx">04</span>Proof</div>
     <h2 class="reveal">The audit <span class="hl">is</span> the proof.</h2>
-    <p class="sec-lede reveal">You see the recovered-pipeline number on your own data before the retainer starts. Until then, here's what's already public.</p>
+    <p class="sec-lede reveal">You see the recovered-pipeline number on your own data before the retainer starts. No claims to take on faith.</p>
     <div class="strip">
       <div class="big reveal">
-        <h3 style="font-size:18px;font-weight:800;">kaikarma-gtm-engine, public and auditable</h3>
-        <p style="margin-top:10px;color:var(--muted);font-weight:300;font-size:14.5px;max-width:48ch;">The same decision engine behind every engagement. It scores accounts, controls spend under caps, routes leads, and learns from outcomes. Offline and tested.</p>
+        <h3 style="font-size:18px;font-weight:800;">The engine behind every engagement</h3>
+        <p style="margin-top:10px;color:var(--muted);font-weight:300;font-size:14.5px;max-width:48ch;">It scores accounts, controls spend under caps, routes leads, and learns from outcomes. Deterministic, tested, and run on your own infrastructure.</p>
         <div class="row">
           <div class="stat"><div class="v">774</div><div class="l">passing tests</div></div>
           <div class="stat"><div class="v">5</div><div class="l">engine pillars</div></div>
-          <div class="stat"><div class="v">MIT</div><div class="l">license</div></div>
+          <div class="stat"><div class="v">2wk</div><div class="l">to your number</div></div>
           <div class="stat"><div class="v">0</div><div class="l">data egress</div></div>
         </div>
-        <a class="btn btn-ghost" style="margin-top:24px;" href="https://github.com/Kai8karma/kaikarma-gtm-engine" target="_blank" rel="noopener" aria-label="Read the kaikarma-gtm-engine source on GitHub">Read the source ↗</a>
+        <a class="btn btn-primary" style="margin-top:24px;" href="#book">Book a pipeline audit →</a>
       </div>
       <div class="guarantee reveal">
-        <div class="ic mono" style="color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:12px;margin-bottom:12px;">// guarantee</div>
+        <div class="ic mono" style="color:var(--accent);font-family:ui-monospace, 'SF Mono', 'JetBrains Mono',monospace;font-size:12px;margin-bottom:12px;">// guarantee</div>
         <h3>Find 10× the fee, or it's free.</h3>
         <p>If the audit doesn't surface at least <b style="color:var(--ink);font-weight:500;">10× its cost</b> in recoverable pipeline, you pay nothing. The retainer runs month to month. Cancel any month, no lock-in.</p>
       </div>
@@ -444,7 +444,7 @@
     <p class="sec-lede reveal">A two-week audit, a real number, no risk. See how much pipeline you can recover before you pay anything to fix it.</p>
     <div class="row reveal">
       <a class="btn btn-primary" href="mailto:kai8karma@gmail.com?subject=Pipeline%20Audit%20inquiry&body=Hi%20Kai%2C%20we%27d%20like%20a%20pipeline%20audit.%20CRM%3A%20%5BHubSpot%2FSalesforce%5D.%20Team%20size%3A%20%5B%5D.">Book a pipeline audit →</a>
-      <a class="btn btn-ghost" href="https://github.com/Kai8karma/kaikarma-gtm-engine" target="_blank" rel="noopener" aria-label="See the open-source GTM engine on GitHub">See the engine ↗</a>
+      <a class="btn btn-ghost" href="#how">How it works →</a>
     </div>
   </div>
 </section>
@@ -455,13 +455,13 @@
   <div class="bigmark">Agent <span class="s">Kai</span></div>
   <div class="wrap">
     <div class="wordmark">Agent <span class="s">Kai</span></div>
-    <a class="flink" href="https://github.com/Kai8karma/kaikarma-gtm-engine" target="_blank" rel="noopener" aria-label="Agent Kai GTM engine repository on GitHub">github ↗</a>
+    <a class="flink" href="#book">Book an audit →</a>
   </div>
 </footer>
 
 <script>
   // ---------- live engine demo: a deterministic JS port of the ICP scorer ----------
-  // Illustrative sample. Mirrors the open-source engine's score = firmographic + signal + fit.
+  // Illustrative sample. Mirrors the engine's score = firmographic + signal + fit.
   const SAMPLE = [
     { nm: "SignalFirst Corp",  meta: "saas · 320 · hubspot+clay", fit: 0.92, signal: 1, firmo: 0.9, dormantDays: 12,  acv: 0 },
     { nm: "Northwind Cloud",   meta: "fintech · 540 · salesforce", fit: 0.84, signal: 1, firmo: 0.8, dormantDays: 9,   acv: 0 },

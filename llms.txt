@@ -1,8 +1,8 @@
 # Agent Kai
 
-> GTM engineering as tested code. Agent Kai runs a tested, open-source GTM engine on your CRM to recover the revenue trapped in broken pipeline data, on your own infrastructure, with zero data egress.
+> GTM engineering as tested code. Agent Kai runs a tested, deterministic GTM engine on your CRM to recover the revenue trapped in broken pipeline data, on your own infrastructure, with zero data egress.
 
-Agent Kai is a solo GTM-engineering firm. The flagship offer, Pipeline Recovery, finds dead pipeline, dedupes and re-enriches CRM data, repairs lead routing, and re-ranks accounts by recoverable revenue. It runs on a public, MIT-licensed decision engine (kaikarma-gtm-engine, 774 passing tests) executed on the client's own infrastructure, so customer data never leaves their VPC. Ideal for US/EU B2B SaaS teams (50 to 1000 employees) on HubSpot or Salesforce with a rotted CRM.
+Agent Kai is a solo GTM-engineering firm. The flagship offer, Pipeline Recovery, finds dead pipeline, dedupes and re-enriches CRM data, repairs lead routing, and re-ranks accounts by recoverable revenue. It runs on a tested, deterministic decision engine (774 passing tests) executed on the client's own infrastructure, so customer data never leaves their VPC. Ideal for US/EU B2B SaaS teams (50 to 1000 employees) on HubSpot or Salesforce with a rotted CRM.
 
 ## Offer
 
@@ -19,14 +19,13 @@ Agent Kai is a solo GTM-engineering firm. The flagship offer, Pipeline Recovery,
 
 ## Differentiators
 
-- Open-source and tested: the decision engine is public, MIT-licensed, 774 passing tests.
+- Tested and deterministic: 774 passing tests, and the same inputs produce the same output every time.
 - Zero data egress: runs on your infrastructure; customer data never goes to a third-party vendor.
 - Revenue, not hygiene: every engagement is measured in recovered pipeline dollars, not dedupe counts.
 
 ## Links
 
-- [Open-source GTM engine on GitHub](https://github.com/Kai8karma/kaikarma-gtm-engine): the MIT-licensed decision engine, 774 tests, that powers every engagement.
-- [Book a pipeline audit](mailto:kai8karma@gmail.com): start with a two-week, quantified audit.
+- [Book a pipeline audit](mailto:kai8karma@gmail.com): start with a two-week, quantified audit on your own CRM.
 
 ## Contact
 
