@@ -266,6 +266,12 @@
   .bigmark { font-weight: 800; font-size: clamp(56px, 16vw, 188px); line-height: 0.9; letter-spacing: -0.045em; padding: 28px 32px 10px; max-width: 1120px; margin: 0 auto; white-space: nowrap; color: var(--ink); }
   .bigmark .s { color: var(--accent); }
   /* ───────── Apple-grade polish - optical type · materials · spring motion ───────── */
+  /* founder block */
+  .founder { display: flex; gap: 28px; align-items: flex-start; margin-top: 38px; max-width: 760px; }
+  .founder-avatar { flex: none; width: 76px; height: 76px; border-radius: 50%; background: linear-gradient(160deg, #14c187, #0c6b50); color: #04130d; font-weight: 800; font-size: 32px; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 1px 0 rgba(255,255,255,0.28); }
+  .founder-body h3 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
+  .founder-body p { margin-top: 10px; font-size: 15.5px; font-weight: 300; color: var(--muted); line-height: 1.62; }
+  @media (max-width: 600px) { .founder { flex-direction: column; gap: 18px; } }
   :root { --ease: cubic-bezier(0.16, 1, 0.3, 1); --ease-out: cubic-bezier(0.22, 1, 0.36, 1); }
   html { -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; scroll-padding-top: 84px; }
   body { font-optical-sizing: auto; }
@@ -432,6 +438,22 @@
         <div class="ic mono" style="color:var(--accent);font-family:ui-monospace, 'SF Mono', 'JetBrains Mono',monospace;font-size:12px;margin-bottom:12px;">// guarantee</div>
         <h3>Find 10× the fee, or it's free.</h3>
         <p>If the audit doesn't surface at least <b style="color:var(--ink);font-weight:500;">10× its cost</b> in recoverable pipeline, you pay nothing. The retainer runs month to month. Cancel any month, no lock-in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- FOUNDER -->
+<section id="who">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="idx">05</span>Who runs this</div>
+    <div class="founder reveal">
+      <div class="founder-avatar" aria-hidden="true">K</div>
+      <div class="founder-body">
+        <h3>Kshitij "Kai" Mishra</h3>
+        <p>GTM engineer. I build the tested, deterministic systems behind revenue teams' pipelines, and I run every Pipeline Recovery engagement myself. No account managers, no handoffs, no junior pod. You work with the person who built the engine.</p>
       </div>
     </div>
   </div>
