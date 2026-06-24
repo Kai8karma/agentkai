@@ -33,8 +33,8 @@
     --panel: rgba(255, 255, 255, 0.025);
     --panel-2: rgba(16, 185, 129, 0.04);
     --ink: #f3f6f4;
-    --muted: #8a978f;
-    --muted-2: #5f6b66;
+    --muted: #9fb0a9;
+    --muted-2: #7b867f;
     --accent: #10b981;
     --accent-2: #93f0c9;
     --mark: #ff5722;
@@ -402,7 +402,7 @@
     <h2 class="reveal">Engineered and tested. <span class="hl">Not</span> a black box.</h2>
     <div class="diffs">
       <div class="card reveal"><div class="ic mono">// deterministic</div><h3>Tested and deterministic</h3><p>The engine is covered by 774 passing tests and runs deterministically. The same inputs produce the same output every time, on numbers you can trace.</p></div>
-      <div class="card reveal"><div class="ic mono">// zero_egress</div><h3>Zero data egress</h3><p>The engine runs on your infrastructure. Your customer data never goes to a third-party vendor's servers. Built for security review and DPAs.</p></div>
+      <div class="card reveal"><div class="ic mono">// zero_egress</div><h3>Zero data egress</h3><p>The engine runs inside your environment: a container in your cloud, or a workstation you control. Your customer data is processed in place and never reaches a third-party server. Built for security review and DPAs.</p></div>
       <div class="card reveal"><div class="ic mono">// revenue_first</div><h3>Revenue, not hygiene</h3><p>We don't bill for dedupe counts. Every engagement is measured one way: recovered pipeline, in dollars.</p></div>
     </div>
   </div>
@@ -553,8 +553,11 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-  // the demo sits high on the page - guarantee it runs even without a scroll
-  window.addEventListener("load", () => setTimeout(runDemo, 500));
+  // robust trigger: always populate the demo, even on reload with scroll restored past the panel
+  function ensureDemo(){ if (!started) runDemo(); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", () => setTimeout(ensureDemo, 350));
+  else setTimeout(ensureDemo, 350);
+  window.addEventListener("load", ensureDemo);
 </script>
 <script>
   // ── awwwards motion: hero flow-field (emerald data stream) + magnetic CTA ──
