@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="Recover the revenue trapped in your broken CRM. Tested, deterministic GTM engine. Zero data egress." />
 <meta name="twitter:image" content="https://kai8karma.github.io/agentkai/og.png" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Agent Kai","description":"GTM engineering as tested code. Agent Kai runs a tested, deterministic GTM engine on your CRM to recover the revenue trapped in broken pipeline data, on your own infrastructure, with zero data egress.","url":"https://kai8karma.github.io/agentkai/","image":"https://kai8karma.github.io/agentkai/og.png","founder":{"@type":"Person","name":"Kai","sameAs":["https://github.com/Kai8karma"]},"serviceType":["GTM engineering","Revenue operations","CRM data recovery"],"areaServed":["United States","European Union"],"knowsAbout":["GTM engineering","Revenue operations","CRM data quality","Pipeline recovery","Lead routing","Account scoring","Zero data egress"],"makesOffer":[{"@type":"Offer","name":"Pipeline Audit","price":"3000","priceCurrency":"USD","description":"A two-week quantified CRM recovery report, ranked by recoverable dollars."},{"@type":"Offer","name":"Pipeline Recovery retainer","price":"10000","priceCurrency":"USD","description":"Monthly GTM data recovery, run on the client's own infrastructure."}],"sameAs":["https://github.com/Kai8karma"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Agent Kai","description":"GTM engineering as tested code. Agent Kai runs a tested, deterministic GTM engine on your CRM to recover the revenue trapped in broken pipeline data, on your own infrastructure, with zero data egress.","url":"https://kai8karma.github.io/agentkai/","image":"https://kai8karma.github.io/agentkai/og.png","founder":{"@type":"Person","name":"Kai","sameAs":["https://github.com/Kai8karma"]},"serviceType":["GTM engineering","Revenue operations","CRM data recovery"],"areaServed":["United States","European Union"],"knowsAbout":["GTM engineering","Revenue operations","CRM data quality","Pipeline recovery","Lead routing","Account scoring","Zero data egress"],"makesOffer":[{"@type":"Offer","name":"Integrity Snapshot","price":"300","priceCurrency":"USD","description":"A 48-hour scored snapshot of up to 1,000 CRM records on one pipeline. Credits toward the full audit."},{"@type":"Offer","name":"Pipeline Audit","price":"3000","priceCurrency":"USD","description":"A two-week quantified CRM recovery report, ranked by recoverable dollars."},{"@type":"Offer","name":"Pipeline Recovery retainer","price":"10000","priceCurrency":"USD","description":"Monthly GTM data recovery, run on the client's own infrastructure."}],"sameAs":["https://github.com/Kai8karma"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,6 +90,7 @@
   .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 34px -8px var(--glow); }
   .btn-ghost { background: rgba(255,255,255,0.05); color: var(--ink); border: 1px solid var(--line); }
   .btn-ghost:hover { background: rgba(255,255,255,0.09); }
+  .btn:active { transform: translateY(0) scale(0.97); transition-duration: 80ms; }
   .wordmark { white-space: nowrap; }
   .cta-short { display: none; }
   @media (max-width: 720px) {
@@ -242,6 +243,12 @@
   footer a.flink:hover { color: var(--accent); }
 
   .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { transform: none; transition: opacity .25s ease; }
+    h1, .hero * { animation: none !important; clip-path: none !important; }
+    .btn, .btn:active { transition: none; transform: none; }
+  }
   .reveal.in { opacity: 1; transform: none; }
   /* above-the-fold must never depend on JS to be visible */
   .hero .reveal { opacity: 1; transform: none; }
