@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gtmos — see where your CRM is leaking money</title>
+<meta name="description" content="A self-hosted GTM audit CLI. Your CRM data never leaves your machine — deterministic scores, zero cloud, one command.">
+<meta name="theme-color" content="#0a0a0b">
+
+<meta property="og:title" content="gtmos — see where your CRM is leaking money">
+<meta property="og:description" content="A self-hosted GTM audit CLI. Your CRM data never leaves your machine — deterministic scores, zero cloud, one command.">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=VT323&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">gtmos_</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#how-it-works">how it works</a>
+      <a href="#security">security</a>
+      <a href="#downloads">downloads</a>
+      <a href="../">done-for-you</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#downloads">Download gtmos</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas id="laser-canvas" aria-hidden="true"></canvas>
+    <div class="hero-fallback-glow" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <p class="eyebrow">gtmos // gtm operating system</p>
+      <h1 class="hero-headline">Your CRM is leaking money. <span class="accent-text">See it.</span></h1>
+      <p class="hero-subhead">A self-hosted GTM audit CLI. Your CRM data never leaves your machine — deterministic scores, zero cloud, one command.</p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="./downloads/gtmos-0.3.0-source.tar.gz" download>Download gtmos</a>
+        <a class="btn btn-ghost" href="./downloads/SAMPLE-REPORT.md" download>See the sample report</a>
+        <a class="btn btn-ghost" href="../">Want it run for you? →</a>
+      </div>
+
+      <p class="trust-strip">deterministic <span aria-hidden="true">·</span> zero-egress <span aria-hidden="true">·</span> 178 tests <span aria-hidden="true">·</span> receipts for every AI call</p>
+
+      <div class="terminal" role="img" aria-label="Terminal showing gtmos quickstart command and a leak estimate output">
+        <div class="terminal-titlebar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+          <span class="terminal-title">zsh — gtmos</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="prompt">$</span> <span id="typed-cmd" class="typed"></span><span id="cursor" class="cursor" aria-hidden="true">&#9608;</span>
+          </div>
+          <div id="terminal-output" class="terminal-output" hidden>
+            <div class="out-line">→ doctor · init · audit · funnel · today</div>
+            <div class="out-line">→ CRM Integrity Score: 62/100</div>
+            <div class="out-line out-leak">→ You're losing <strong>$44,750</strong> this quarter.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: hosted vs local -->
+  <section class="section reveal" id="hosted-local">
+    <div class="section-inner narrow">
+      <p class="eyebrow">01</p>
+      <h2>The demo is on Vercel. Your data never will be.</h2>
+      <p>Every other CRM audit tool works the same way: you hand over API access, your contacts and deals flow into their cloud, and a few days later you get a slide deck scored on a curve nobody can check. That's not a design choice they can undo — hosted SaaS <em>is</em> the product, so "your data stays local" was never on their roadmap.</p>
+      <p>gtmos runs the other way. <code>pip install -e .</code> puts the audit engine, the funnel model, and the local dashboard on your machine, reading your HubSpot data through a token you hold (<code>GTMOS_HUBSPOT_TOKEN</code>). The scoring code never calls a network API — it's pure Python, reproducible from the same input every time. The only two systems gtmos ever talks to outside your machine are HubSpot (your token) and the <code>claude</code> CLI (your own Claude Code auth) — both documented, both yours.</p>
+      <p>This page is hosted. The website is allowed to leave your machine. Your contact list, your deal stages, your customer emails — those don't, because there's no server in the path for them to leave through.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: how it works -->
+  <section class="section reveal" id="how-it-works">
+    <div class="section-inner">
+      <p class="eyebrow">02</p>
+      <h2>How it works</h2>
+
+      <div class="steps">
+        <div class="step glass">
+          <p class="step-num">1</p>
+          <h3>Quickstart — one command, first number.</h3>
+          <pre class="code-block"><code>gtmos quickstart</code></pre>
+          <p>Chains doctor → init → audit → funnel → today: preflight, workspace scaffold, CRM audit, funnel leak, daily checklist. Live or offline.</p>
+        </div>
+
+        <div class="step glass">
+          <p class="step-num">2</p>
+          <h3>Today loop — ten minutes, every morning.</h3>
+          <pre class="code-block"><code>gtmos today --role &lt;yours&gt;</code></pre>
+          <p>Prints your role's checklist, overdue-first, ranked by dollars at risk. Log what you send; the state file is the truth.</p>
+        </div>
+
+        <div class="step glass">
+          <p class="step-num">3</p>
+          <h3>Weekly leak review — Monday, before standup.</h3>
+          <pre class="code-block"><code>gtmos audit --portal &amp;&amp; gtmos funnel --portal &amp;&amp; gtmos eval &amp;&amp; gtmos weekly</code></pre>
+          <p>Refreshes every number and assembles <code>weekly-review.md</code> with one leak headline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO VIDEO -->
+  <section class="section reveal" id="demo">
+    <div class="section-inner narrow">
+      <p class="eyebrow">03</p>
+      <h2>Watch the ten-minute loop</h2>
+      <div class="browser-frame glass">
+        <div class="browser-titlebar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+        </div>
+        <div class="video-wrap">
+          <video
+            id="demo-video"
+            src="./assets/gtmos-demo.mp4"
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="gtmos demo: quickstart, today loop, and weekly leak review in the terminal"
+          ></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLE GRID -->
+  <section class="section reveal" id="roles">
+    <div class="section-inner">
+      <p class="eyebrow">04</p>
+      <h2>One CLI, every GTM role</h2>
+
+      <div class="grid grid-4">
+        <article class="card glass">
+          <h3>Founder / CRO</h3>
+          <pre class="code-block small"><code>gtmos today --role founder</code></pre>
+          <p>One leak headline and an activity pulse — know in dollars where GTM is bleeding, without a consultant's slide deck.</p>
+        </article>
+
+        <article class="card glass">
+          <h3>RevOps</h3>
+          <pre class="code-block small"><code>gtmos audit --portal</code></pre>
+          <p>A 5-dimension CRM Integrity Score with duplicate clusters, so drift gets caught before it compounds instead of after.</p>
+        </article>
+
+        <article class="card glass">
+          <h3>SDR / outbound</h3>
+          <pre class="code-block small"><code>gtmos today --role sdr</code></pre>
+          <p>The exact due/overdue touches for today, in order, without re-deriving a list from three separate tools.</p>
+        </article>
+
+        <article class="card glass">
+          <h3>Marketing / ABM</h3>
+          <pre class="code-block small"><code>gtmos abm --accounts accounts.json --out ./abm-out</code></pre>
+          <p>A deterministic 1:1 account ad-set plan tied to a real signal, no per-contact SaaS fee, no LLM in the plan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAK MODEL -->
+  <section class="section reveal" id="leak-model">
+    <div class="section-inner narrow">
+      <p class="eyebrow">05</p>
+      <h2>What the $-number actually means</h2>
+      <p>The headline is a dollar figure, and it's built from two deterministic models — no LLM ever touches it.</p>
+      <p><strong>The audit side</strong> flags records as unreachable when they have no valid email and no valid phone (validity or freshness below threshold), then converts the unreachable share into dollars using your ACV and a baseline conversion rate: <code>unreachable_pct × total_records × ACV × 2%</code>.</p>
+      <p><strong>The funnel side</strong> looks at deal stages instead of contacts: it adds up closed-lost value plus half of stalled open-deal value (<code>closed-lost + 0.5 × stalled</code>), imputing a median value for any deal missing a dollar amount so incomplete data doesn't zero out the estimate.</p>
+      <p class="caveat">Honest caveat: this is an order-of-magnitude estimate, not a forecast. The 2% baseline conversion rate and the 0.5× stalled-deal discount are stated assumptions, not measured facts about your pipeline — both are editable inputs (<code>--acv</code>, <code>--stall-days</code>), and the methodology is published so you can check or reimplement it yourself.</p>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="section reveal" id="security">
+    <div class="section-inner narrow">
+      <p class="eyebrow">06</p>
+      <h2>Security</h2>
+      <ul class="security-list">
+        <li><strong>One chokepoint for every LLM call.</strong> <code>run_harness()</code> in <code>gtmos/harness.py</code> is the only function in the codebase that shells out to <code>claude</code> — enforced by a static scan that fails the build if any other file calls <code>subprocess.*</code>.</li>
+        <li><strong>A receipt for every AI call.</strong> Timestamp, command, prompt size, duration, and exit code get written to <code>~/.gtmos/receipts.jsonl</code> on every harness invocation — agent usage is auditable, not a black box.</li>
+        <li><strong>Your token is never logged.</strong> <code>GTMOS_HUBSPOT_TOKEN</code> is read from the environment at call time and held in process memory only — it is never written to <code>gtmos-team.json</code>, <code>report.json</code>, the receipts log, or any other artifact gtmos produces.</li>
+        <li><strong>The dashboard binds to localhost.</strong> <code>gtmos serve</code> defaults to <code>127.0.0.1</code>; binding <code>0.0.0.0</code> is refused unless you pass <code>--lan</code> explicitly, and the dashboard itself is read-only.</li>
+        <li><strong>An eval harness gates the claims.</strong> <code>gtmos eval</code> runs an audit-determinism check, a receipts-integrity check, and the harness-contract scan before you trust a number — exit 1 on any failure, wired into pre-push.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DOWNLOADS -->
+  <section class="section reveal" id="downloads">
+    <div class="section-inner">
+      <p class="eyebrow">07</p>
+      <h2>Downloads</h2>
+
+      <div class="grid grid-4">
+        <article class="card glass download-card">
+          <h3>gtmos source</h3>
+          <p><code>pip install -e .</code> from the repo tarball; Python 3.11+, zero external dependencies (stdlib only).</p>
+          <a class="btn btn-ghost download-btn" href="./downloads/gtmos-0.3.0-source.tar.gz" download>
+            Download <span class="filesize">.tar.gz · 165 KB</span>
+          </a>
+        </article>
+
+        <article class="card glass download-card">
+          <h3>Sample report</h3>
+          <p>A full CRM Integrity Report on 500 synthetic records, so you can see the score, duplicate clusters, and $-leak format before running it on your own portal.</p>
+          <a class="btn btn-ghost download-btn" href="./downloads/SAMPLE-REPORT.md" download>
+            Download <span class="filesize">.md · 13.5 KB</span>
+          </a>
+        </article>
+
+        <article class="card glass download-card">
+          <h3>Team playbook</h3>
+          <p>The daily / weekly / play loop doctrine for founder, RevOps, SDR, and marketing roles, each with a trigger, a process, a verify step, and a stop condition.</p>
+          <a class="btn btn-ghost download-btn" href="./downloads/TEAM-PLAYBOOK.md" download>
+            Download <span class="filesize">.md · 3.5 KB</span>
+          </a>
+        </article>
+
+        <article class="card glass download-card">
+          <h3>Changelog</h3>
+          <p>Every shipped command by version, current: v0.3.0 (<code>today</code>, <code>play touch/status</code>, <code>prompts</code>, <code>serve</code>, <code>quickstart</code>, <code>doctor</code>).</p>
+          <a class="btn btn-ghost download-btn" href="./downloads/CHANGELOG.md" download>
+            Download <span class="filesize">.md · 6.7 KB</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section reveal" id="faq">
+    <div class="section-inner narrow">
+      <p class="eyebrow">08</p>
+      <h2>FAQ</h2>
+
+      <div class="faq-list">
+        <details class="faq-item glass">
+          <summary>Is my CRM data sent anywhere?</summary>
+          <p>No. The audit and funnel engines run as plain Python on your machine and never make a network call. The only two systems gtmos talks to outside your machine are the HubSpot API (your own token) and the local <code>claude</code> CLI subprocess (your own Claude Code auth) — both are things you already hold, not a new vendor.</p>
+        </details>
+
+        <details class="faq-item glass">
+          <summary>What does the AI actually do?</summary>
+          <p>It never touches a score. LLM calls are limited to a handful of commands — <code>prospect</code>, <code>stalk</code>, <code>draft</code>, <code>brief</code>, and <code>play run --draft</code> — that draft outreach copy or research, all routed through one chokepoint (<code>run_harness()</code>) with a receipt written for every call. Audit, funnel, eval, weekly, and play planning are deterministic Python with no model in the loop.</p>
+        </details>
+
+        <details class="faq-item glass">
+          <summary>HubSpot only?</summary>
+          <p>Today, yes — the audit and funnel engines are built against HubSpot's contact/company and deal model. The scoring methodology itself is CRM-agnostic; other CRM adapters are on the roadmap, gated on a paying or piloting customer whose primary CRM isn't HubSpot.</p>
+        </details>
+
+        <details class="faq-item glass">
+          <summary>How is the leak number computed?</summary>
+          <p>Two published, deterministic formulas: on the audit side, <code>unreachable_pct × total_records × ACV × 2%</code>; on the funnel side, <code>closed-lost value + 0.5 × stalled open value</code> with median imputation for unvalued deals. Full methodology is documented, not a black box — you can check the math or reimplement it yourself.</p>
+        </details>
+
+        <details class="faq-item glass">
+          <summary>License?</summary>
+          <p>Proprietary, source-available. GTM OS ships under an evaluation license — 30 days from first install, for evaluation purposes only — with a separate commercial license/EULA required for ongoing team or organization use.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="section-inner">
+    <p class="footer-tagline">gtmos — self-hosted GTM operating system. Deterministic scores, zero-egress by design, a receipt for every AI call.</p>
+    <p class="footer-links">
+      <code>pip install -e .</code>
+      <span aria-hidden="true">·</span>
+      <a href="./downloads/SAMPLE-REPORT.md" download>Sample report</a>
+      <span aria-hidden="true">·</span>
+      <a href="#security">Security policy</a>
+      <span aria-hidden="true">·</span>
+      <a href="./downloads/TEAM-PLAYBOOK.md" download>Team playbook</a>
+      <span aria-hidden="true">·</span>
+      <a href="./downloads/CHANGELOG.md" download>Changelog</a>
+      <span aria-hidden="true">·</span>
+      <a href="../">Done-for-you audit</a>
+    </p>
+    <p class="footer-legal">© 2026 Kai (kaikarma). All rights reserved. Proprietary software — see LICENSE.md for evaluation and commercial license terms.</p>
+  </div>
+</footer>
+
+<script src="./laser.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
