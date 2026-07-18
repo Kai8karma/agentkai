@@ -24,9 +24,25 @@
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.08 }
     );
     revealEls.forEach(function (el) { revealObserver.observe(el); });
+
+    // insurance: headless/hidden/throttled contexts (crawlers, previews,
+    // prerender) never get IO+rAF driven reveals — force content visible
+    // so the page can't render blank
+    var forceReveal = function () {
+      // transitions are suspended in hidden tabs — kill them so the forced
+      // state paints immediately (rule lives in styles.css)
+      document.documentElement.classList.add('force-reveal');
+      revealEls.forEach(function (el) { el.classList.add('visible'); });
+    };
+    var rafAlive = false;
+    requestAnimationFrame(function () { rafAlive = true; });
+    if (document.visibilityState === 'hidden') forceReveal();
+    setTimeout(function () {
+      if (!rafAlive || document.visibilityState === 'hidden') forceReveal();
+    }, 1400);
   }
 
   // ---------- hero terminal typing effect ----------
