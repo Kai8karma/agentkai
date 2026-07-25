@@ -4,24 +4,24 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Agent Kai · Pipeline Recovery · GTM engineering as tested code</title>
-<meta name="description" content="Recover the revenue trapped in your broken CRM. A tested, deterministic GTM engine, run on your data. Runs on your infra. Your data never leaves." />
+<meta name="description" content="Recover the revenue trapped in your broken CRM. A tested, deterministic GTM engine, run on your data, in your environment. No new vendor touches your data." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0a0f0d" />
 <link rel="canonical" href="https://kai8karma.github.io/agentkai/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Agent Kai" />
 <meta property="og:title" content="Agent Kai · Pipeline Recovery" />
-<meta property="og:description" content="Recover the revenue trapped in your broken CRM. A tested, deterministic GTM engine, run on your data, with zero data egress." />
+<meta property="og:description" content="Recover the revenue trapped in your broken CRM. A tested, deterministic GTM engine, run on your data, in your environment. No new vendors." />
 <meta property="og:url" content="https://kai8karma.github.io/agentkai/" />
 <meta property="og:image" content="https://kai8karma.github.io/agentkai/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Agent Kai · Pipeline Recovery" />
-<meta name="twitter:description" content="Recover the revenue trapped in your broken CRM. Tested, deterministic GTM engine. Zero data egress." />
+<meta name="twitter:description" content="Recover the revenue trapped in your broken CRM. Tested, deterministic GTM engine. Runs in your environment, no new vendors." />
 <meta name="twitter:image" content="https://kai8karma.github.io/agentkai/og.png" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Agent Kai","description":"GTM engineering as tested code. Agent Kai runs a tested, deterministic GTM engine on your CRM to recover the revenue trapped in broken pipeline data, on your own infrastructure, with zero data egress.","url":"https://kai8karma.github.io/agentkai/","image":"https://kai8karma.github.io/agentkai/og.png","founder":{"@type":"Person","name":"Kai","sameAs":["https://github.com/Kai8karma"]},"serviceType":["GTM engineering","Revenue operations","CRM data recovery"],"areaServed":["United States","European Union"],"knowsAbout":["GTM engineering","Revenue operations","CRM data quality","Pipeline recovery","Lead routing","Account scoring","Zero data egress"],"makesOffer":[{"@type":"Offer","name":"Integrity Snapshot","price":"300","priceCurrency":"USD","description":"A 48-hour scored snapshot of up to 1,000 CRM records on one pipeline. Credits toward the full audit."},{"@type":"Offer","name":"Pipeline Audit","price":"3000","priceCurrency":"USD","description":"A two-week quantified CRM recovery report, ranked by recoverable dollars."},{"@type":"Offer","name":"Pipeline Recovery retainer","price":"10000","priceCurrency":"USD","description":"Monthly GTM data recovery, run on the client's own infrastructure."}],"sameAs":["https://github.com/Kai8karma"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Agent Kai","description":"GTM engineering as tested code. Agent Kai runs a tested, deterministic GTM engine on your CRM to recover the revenue trapped in broken pipeline data, inside your own environment, with no new vendor touching your data.","url":"https://kai8karma.github.io/agentkai/","image":"https://kai8karma.github.io/agentkai/og.png","founder":{"@type":"Person","name":"Kai","sameAs":["https://github.com/Kai8karma"]},"serviceType":["GTM engineering","Revenue operations","CRM data recovery"],"areaServed":["United States","European Union"],"knowsAbout":["GTM engineering","Revenue operations","CRM data quality","Pipeline recovery","Lead routing","Account scoring","Zero data egress"],"makesOffer":[{"@type":"Offer","name":"Integrity Snapshot","price":"300","priceCurrency":"USD","description":"A 48-hour scored snapshot of up to 1,000 CRM records on one pipeline. Credits toward the full audit."},{"@type":"Offer","name":"Pipeline Audit","price":"3000","priceCurrency":"USD","description":"A two-week quantified CRM recovery report, ranked by recoverable dollars."},{"@type":"Offer","name":"Pipeline Recovery retainer","price":"10000","priceCurrency":"USD","description":"Monthly GTM data recovery, run on the client's own infrastructure."}],"sameAs":["https://github.com/Kai8karma"]}
 </script>
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
@@ -244,8 +244,7 @@
   footer a.flink { color: var(--muted); font-size: 13px; }
   footer a.flink:hover { color: var(--accent); }
 
-  /* single source of truth for scroll reveals — transform/opacity only (no filter: paint cost) */
-  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .reveal { transform: none; transition: opacity .25s ease; }
@@ -274,6 +273,10 @@
   .btn-primary { position: relative; overflow: hidden; }
   .btn-primary::after { content: ""; position: absolute; width: 150px; height: 150px; left: var(--mx, 50%); top: var(--my, 50%); transform: translate(-50%,-50%); background: radial-gradient(circle, rgba(255,255,255,0.30), transparent 60%); opacity: 0; transition: opacity .35s; pointer-events: none; }
   .btn-primary:hover::after { opacity: 1; }
+  /* reveals refine: blur → sharp */
+  .reveal { filter: blur(7px); transition: opacity .75s ease, transform .75s ease, filter .75s ease; }
+  .reveal.in { filter: blur(0); }
+  .hero .reveal { filter: none; }
   /* giant closing wordmark (bento ghost-text move) */
   .bigmark { font-weight: 800; font-size: clamp(56px, 16vw, 188px); line-height: 0.9; letter-spacing: -0.045em; padding: 28px 32px 10px; max-width: 1120px; margin: 0 auto; white-space: nowrap; color: var(--ink); }
   .bigmark .s { color: var(--accent); }
@@ -297,6 +300,7 @@
   .card, .step { border-radius: 18px; }
   .console { box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 30px 80px -42px rgba(0,0,0,0.85), 0 8px 22px -16px rgba(0,0,0,0.55); }
   /* spring-out motion */
+  .reveal { transition: opacity .8s var(--ease), transform .8s var(--ease), filter .8s var(--ease); }
   .console { transition: transform 1.3s var(--ease), box-shadow 1.3s var(--ease); }
   .btn { transition: transform .22s var(--ease-out), box-shadow .28s var(--ease-out), background .28s var(--ease-out); }
   /* precise, top-lit primary CTA */
@@ -330,7 +334,7 @@
   <div class="wrap">
     <div class="kicker reveal"><span class="sq"></span> GTM ENGINEERING · AS TESTED CODE</div>
     <h1 class="reveal">Recover the <span class="hl">revenue trapped</span> in your broken CRM.</h1>
-    <p class="lede reveal">The pipeline you already built is sitting in your CRM, rotting. <b>Pipeline Recovery</b> runs a tested, deterministic GTM engine on your data. It finds the dead accounts, clears the duplicates, and re-ranks who to chase. <b>It runs on your infrastructure. Your data never leaves.</b></p>
+    <p class="lede reveal">The pipeline you already built is sitting in your CRM, rotting. <b>Pipeline Recovery</b> runs a tested, deterministic GTM engine on your data. It finds the dead accounts, clears the duplicates, and re-ranks who to chase. <b>It runs in your environment. No new vendor ever touches your data.</b></p>
     <div class="hero-cta reveal">
       <a class="btn btn-primary" href="#book">Book a pipeline audit →</a>
       <a class="btn btn-ghost" href="#how">How it works →</a>
@@ -338,7 +342,7 @@
     <div class="trust reveal">
       <span><span class="dot">●</span> <b>774</b> passing tests</span>
       <span><span class="dot">●</span> <b>Deterministic</b> engine</span>
-      <span><span class="dot">●</span> <b>Zero</b> data egress</span>
+      <span><span class="dot">●</span> <b>Zero</b> new vendors</span>
     </div>
 
     <!-- LIVE DEMO -->
@@ -419,7 +423,7 @@
     <h2 class="reveal">Engineered and tested. <span class="hl">Not</span> a black box.</h2>
     <div class="diffs">
       <div class="card reveal"><div class="ic mono">// deterministic</div><h3>Tested and deterministic</h3><p>The engine is covered by 774 passing tests and runs deterministically. The same inputs produce the same output every time, on numbers you can trace.</p></div>
-      <div class="card reveal"><div class="ic mono">// zero_egress</div><h3>Zero data egress</h3><p>The engine runs inside your environment: a container in your cloud, or a workstation you control. Your customer data is processed in place and never reaches a third-party server. Built for security review and DPAs.</p></div>
+      <div class="card reveal"><div class="ic mono">// no_new_vendors</div><h3>No new vendor in your stack</h3><p>The engine runs inside your environment: a container in your cloud, or a workstation you control. Your data is processed in place, and the only AI in the loop is the Claude account you already hold, under its own DPA. Regulated team? Ask about the fully air-gapped tier with local models.</p></div>
       <div class="card reveal"><div class="ic mono">// revenue_first</div><h3>Revenue, not hygiene</h3><p>We don't bill for dedupe counts. Every engagement is measured one way: recovered pipeline, in dollars.</p></div>
     </div>
   </div>
@@ -441,7 +445,7 @@
           <div class="stat"><div class="v">774</div><div class="l">passing tests</div></div>
           <div class="stat"><div class="v">5</div><div class="l">engine pillars</div></div>
           <div class="stat"><div class="v">2wk</div><div class="l">to your number</div></div>
-          <div class="stat"><div class="v">0</div><div class="l">data egress</div></div>
+          <div class="stat"><div class="v">0</div><div class="l">new vendors</div></div>
         </div>
         <a class="btn btn-primary" style="margin-top:24px;" href="#book">Book a pipeline audit →</a>
         <a class="flink" style="display:inline-block;margin-top:14px;margin-left:16px;" href="gtmos/">see the engine: gtmos →</a>
@@ -490,7 +494,7 @@
       <div class="big reveal">
         <h3 style="font-size:18px;font-weight:800;">CRM Integrity Audit</h3>
         <div class="price mono" style="margin-top:6px;">$3,000 · flat</div>
-        <p style="margin-top:10px;color:var(--muted);font-weight:300;font-size:14.5px;max-width:52ch;">GTM OS scores all five dimensions against your live CRM, self-hosted in your own infrastructure — zero data egress. You get the integrity report, a ranked top-fix list, and a dollar estimate of what's leaking.</p>
+        <p style="margin-top:10px;color:var(--muted);font-weight:300;font-size:14.5px;max-width:52ch;">GTM OS scores all five dimensions against your live CRM, self-hosted in your own environment, with no new vendor in the loop. You get the integrity report, a ranked top-fix list, and a dollar estimate of what's leaking.</p>
         <div style="margin-top:18px;padding:16px 18px;border:1px solid var(--line, rgba(128,128,128,.3));border-radius:10px;">
           <div class="ic mono" style="font-size:12px;color:var(--accent);">// start small</div>
           <h4 style="font-size:15px;font-weight:800;margin-top:6px;">Integrity Snapshot <span class="mono" style="font-weight:700;">· $300</span></h4>
@@ -624,19 +628,6 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-  // insurance: headless/hidden/throttled contexts (crawlers, previews, prerender) never
-  // get IO+rAF driven reveals — force content visible so the page can't render blank
-  const forceReveal = () => {
-    // transitions are suspended in hidden tabs — kill them so the forced state paints immediately
-    const kill = document.createElement("style");
-    kill.textContent = ".reveal{transition:none !important;opacity:1 !important;transform:none !important}";
-    document.head.appendChild(kill);
-    document.querySelectorAll(".reveal:not(.in)").forEach(el => el.classList.add("in"));
-  };
-  let rafAlive = false;
-  requestAnimationFrame(() => { rafAlive = true; });
-  if (document.visibilityState === "hidden") forceReveal();
-  setTimeout(() => { if (!rafAlive || document.visibilityState === "hidden") forceReveal(); }, 1400);
   // robust trigger: always populate the demo, even on reload with scroll restored past the panel
   function ensureDemo(){ if (!started) runDemo(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", () => setTimeout(ensureDemo, 350));
