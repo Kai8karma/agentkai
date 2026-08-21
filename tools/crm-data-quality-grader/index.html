@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free CRM Data Quality Grader - score your HubSpot or Salesforce export in your browser</title>
+<meta name="description" content="Paste a CRM export and get a data quality score in seconds: completeness, validity, freshness, duplicates. Runs entirely in your browser. Nothing is uploaded." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0a0f0d" />
+<link rel="canonical" href="https://kai8karma.github.io/agentkai/tools/crm-data-quality-grader/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Agent Kai" />
+<meta property="og:title" content="Free CRM Data Quality Grader" />
+<meta property="og:description" content="Score your CRM export in your browser. Five dimensions, duplicate detection, letter grade. Nothing is uploaded." />
+<meta property="og:url" content="https://kai8karma.github.io/agentkai/tools/crm-data-quality-grader/" />
+<meta property="og:image" content="https://kai8karma.github.io/agentkai/og.png" />
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"CRM Data Quality Grader","url":"https://kai8karma.github.io/agentkai/tools/crm-data-quality-grader/","applicationCategory":"BusinessApplication","operatingSystem":"Any (browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free in-browser CRM data quality scorer: completeness, validity, freshness, ownership, consistency, duplicate clusters. No upload; data never leaves the browser.","publisher":{"@type":"Organization","name":"Agent Kai","url":"https://kai8karma.github.io/agentkai/"}}
+</script>
+<style>
+:root{--bg:#0a0f0d;--panel:rgba(255,255,255,.025);--ink:#f3f6f4;--muted:#9fb0a9;--muted-2:#7b867f;--accent:#10b981;--accent-2:#93f0c9;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.04)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+.mono{font-family:ui-monospace,"SF Mono","JetBrains Mono",monospace}
+a{color:var(--accent-2)}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+header{padding:56px 0 8px}
+.crumb{font-family:ui-monospace,monospace;font-size:12px;color:var(--muted-2);margin-bottom:22px}
+.crumb a{color:var(--muted-2);text-decoration:none}
+h1{font-weight:800;font-size:clamp(30px,5vw,44px);letter-spacing:-.03em;line-height:1.08;max-width:22ch}
+h1 .hl{color:var(--accent)}
+.lede{margin-top:16px;font-size:17px;font-weight:300;color:var(--muted);max-width:64ch}
+.badges{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:ui-monospace,monospace;font-size:12px;color:var(--muted-2)}
+.badges b{color:var(--muted)}
+.dot{color:var(--accent)}
+.ad-shell{margin:34px 0;background:var(--panel);border:1px solid var(--line-2);border-radius:16px;padding:22px}
+.ad-controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.btn{font-family:ui-monospace,monospace;font-weight:700;font-size:13px;padding:11px 18px;border-radius:9px;cursor:pointer;border:none;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:linear-gradient(180deg,#14c187,#10b981);color:#04130d}
+.btn-ghost{background:rgba(255,255,255,.05);color:var(--ink);border:1px solid var(--line)}
+#ad-input{width:100%;background:rgba(0,0,0,.32);color:var(--ink);border:1px solid var(--line);border-radius:11px;padding:14px;font-family:ui-monospace,monospace;font-size:12.5px;line-height:1.6;resize:vertical;min-height:150px}
+#ad-input:focus{outline:none;border-color:var(--accent)}
+.ad-note{font-size:11.5px;color:var(--muted-2);letter-spacing:.07em;margin-top:9px}
+.ad-error{margin-top:12px;color:#ffb38a;font-size:14px}
+.ad-headline{display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--line-2)}
+.ad-score{display:flex;align-items:baseline;gap:9px}
+.ad-score-val{font-size:46px;font-weight:700;color:var(--accent);letter-spacing:-.03em}
+.ad-grade{font-size:20px;font-weight:800;color:var(--muted)}
+.ad-facts p{font-size:13.5px;color:var(--muted);font-weight:300}
+.ad-facts b{color:var(--ink)}
+.ad-dims{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.ad-dim{display:grid;grid-template-columns:104px 1fr 44px;align-items:center;gap:10px;font-size:13px}
+.ad-dim-name{color:var(--muted)}
+.ad-bar{height:6px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;display:block}
+.ad-bar i{display:block;height:100%;background:var(--accent);border-radius:4px}
+.ad-dim-val{color:var(--ink);text-align:right;font-size:12px}
+.ad-table{width:100%;margin-top:20px;border-collapse:collapse;font-size:13px}
+.ad-table th{text-align:left;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted-2);font-weight:500;padding-bottom:8px;border-bottom:1px solid var(--line-2)}
+.ad-table td{padding:8px 0;border-bottom:1px solid var(--line-2);color:var(--muted)}
+.ad-proof{margin-top:16px;font-size:12.5px;color:var(--accent-2)}
+#ad-after{margin-top:20px;padding-top:18px;border-top:1px solid var(--line-2)}
+.ad-after-copy{font-size:14.5px;color:var(--muted);font-weight:300;max-width:62ch;margin-bottom:14px}
+.ad-after-copy b{color:var(--ink)}
+section.seo{padding:26px 0 60px}
+section.seo h2{font-size:20px;font-weight:800;letter-spacing:-.01em;margin:26px 0 8px}
+section.seo p,section.seo li{font-size:14.5px;color:var(--muted);font-weight:300;max-width:70ch}
+section.seo ul{padding-left:20px;margin-top:6px}
+footer{border-top:1px solid var(--line-2);padding:22px 0 40px;font-family:ui-monospace,monospace;font-size:12px;color:var(--muted-2)}
+footer a{color:var(--muted)}
+@media(max-width:600px){.ad-dim{grid-template-columns:86px 1fr 40px}.ad-score-val{font-size:38px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="crumb"><a href="../../">Agent Kai</a> / tools / crm-data-quality-grader</div>
+    <h1>Free CRM Data Quality Grader. <span class="hl">Nothing</span> is uploaded.</h1>
+    <p class="lede">Paste a HubSpot or Salesforce export (CSV or JSON) and get a scored report in seconds:
+    completeness, validity, freshness, ownership, consistency, plus duplicate clusters and a letter grade.
+    It runs entirely in this browser tab. This page has no backend, so your records cannot leave it.</p>
+    <div class="badges">
+      <span><span class="dot">●</span> <b>runs offline</b></span>
+      <span><span class="dot">●</span> <b>no upload</b></span>
+      <span><span class="dot">●</span> <b>no signup</b></span>
+      <span><span class="dot">●</span> <b>deterministic scoring</b></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="ad-shell">
+      <div class="ad-controls">
+        <button class="btn btn-ghost" id="ad-sample" type="button">Load sample data</button>
+        <button class="btn btn-primary" id="ad-run" type="button">Score it &rarr;</button>
+      </div>
+      <textarea id="ad-input" spellcheck="false" rows="7" placeholder="Paste CSV (with a header row) or JSON here. Recognised columns: email, firstname, lastname, company, jobtitle, phone, lifecyclestage, owner, last_activity_date"></textarea>
+      <p class="ad-note mono">runs offline &middot; no upload &middot; no cookie &middot; nothing stored</p>
+      <p class="ad-error" id="ad-error" hidden></p>
+      <div id="ad-results" hidden></div>
+      <div id="ad-after" hidden>
+        <p class="ad-after-copy">That score is the free part. Fixing it is the work: deduplication, re-enrichment,
+        routing repair, and a system your own Claude runs daily. <b>First 50 accounts audited free.</b>
+        Or connect the same engine to your live CRM through your own Claude: <span class="mono">pip install gtmos-mcp</span></p>
+        <a class="btn btn-primary" href="mailto:kai8karma@gmail.com?subject=Free%20pipeline%20audit&body=Hi%20Kai%2C%20I%20ran%20the%20browser%20grader.%20Score%3A%20%5Bpaste%5D.%20CRM%3A%20%5BHubSpot%2FSalesforce%5D.%20Team%20size%3A%20%5B%5D.">Get the full audit free &rarr;</a>
+        <a class="btn btn-ghost" href="https://github.com/Kai8karma/gtmos-mcp">See the engine on GitHub &rarr;</a>
+      </div>
+    </div>
+
+    <section class="seo">
+      <h2>What does this tool check?</h2>
+      <ul>
+        <li><b>Completeness</b>: are the fields that selling depends on (email, company, title, owner, phone) actually filled?</li>
+        <li><b>Validity</b>: are emails real-looking and non-disposable, are phones plausible, are fields junk ("test", "asdf", "n/a")?</li>
+        <li><b>Freshness</b>: when was each contact last touched? Records untouched for a year score near zero.</li>
+        <li><b>Ownership</b>: does every record have an owner, or is it sitting in nobody's queue?</li>
+        <li><b>Consistency</b>: are "customers" and "opportunities" with no activity in a year still marked as active stages?</li>
+        <li><b>Duplicates</b>: exact email matches and fuzzy name-plus-company clusters, with a portal-level penalty.</li>
+      </ul>
+      <h2>How is the score computed?</h2>
+      <p>Deterministically. The five dimensions are weighted (completeness 30%, validity 25%, freshness 25%,
+      ownership 10%, consistency 10%), records that cannot be reached by any channel are capped, and duplicate
+      share penalises the portal score. The same input always produces the same score. The scoring code runs
+      in your browser and makes no network calls, which you can confirm in your devtools network panel.</p>
+      <h2>Why is it free?</h2>
+      <p>Scoring is the easy half. The paid work, when you want it, is fixing what the score finds:
+      deduplication, re-enrichment, routing repair, and dormant-account reactivation, run inside your own
+      environment so no new vendor touches your data. The grader is how you find out whether that
+      conversation is worth having.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Agent Kai &middot; <a href="../../">home</a> &middot; <a href="https://github.com/Kai8karma/gtmos-mcp">gtmos-mcp on GitHub</a> &middot; <span class="mono">pip install gtmos-mcp</span></div>
+</footer>
+
+<script src="grader.js" defer></script>
+</body>
+</html>

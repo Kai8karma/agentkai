@@ -30,3 +30,7 @@ Agent Kai is a solo GTM-engineering firm. The flagship offer, Pipeline Recovery,
 ## Contact
 
 - Email: kai8karma@gmail.com
+
+## Free tools
+
+- [CRM Data Quality Grader](https://kai8karma.github.io/agentkai/tools/crm-data-quality-grader/): score a HubSpot/Salesforce export in the browser; five weighted dimensions, duplicate clusters, letter grade; nothing uploaded.
