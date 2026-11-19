@@ -40,111 +40,111 @@ _Generated 2026-07-09T13:01:04+00:00_
 
 | Email | Overall | Worst dimension |
 |---|---|---|
-| varun.sharma494@copperlaneindustrial.com | 44.2 | ownership |
-| n.a.@lead4corp.com | 45.0 | freshness |
-| lead5@mailinator.com | 45.0 | validity |
-| contact6@example.com | 45.0 | validity |
-| contact12@email.com | 45.0 | ownership |
+| varun.sharma494@copperlaneindustrial.example | 44.2 | ownership |
+| n.a.@lead4corp.example | 45.0 | freshness |
+| lead5@mailinator.example | 45.0 | validity |
+| contact6@example.example | 45.0 | validity |
+| contact12@email.example | 45.0 | ownership |
 | not-an-email-17 | 45.0 | freshness |
-| contact29@domain.com | 45.0 | freshness |
-| contact34@example.com | 45.0 | validity |
-| xxx@lead47corp.com | 45.0 | validity |
-| contact50@test.com | 45.0 | validity |
-| lead53@mailinator.com | 45.0 | validity |
-| contact61@domain.com | 45.0 | validity |
-| xxx@lead62corp.com | 45.0 | ownership |
-| na@lead92corp.com | 45.0 | validity |
-| contact98@test.com | 45.0 | ownership |
-| asdf@lead99corp.com | 45.0 | validity |
-| xx@lead111corp.com | 45.0 | freshness |
-| contact112@test.com | 45.0 | validity |
-| contact123@domain.com | 45.0 | freshness |
-| unknown@lead128corp.com | 45.0 | freshness |
+| contact29@domain.example | 45.0 | freshness |
+| contact34@example.example | 45.0 | validity |
+| xxx@lead47corp.example | 45.0 | validity |
+| contact50@test.example | 45.0 | validity |
+| lead53@mailinator.example | 45.0 | validity |
+| contact61@domain.example | 45.0 | validity |
+| xxx@lead62corp.example | 45.0 | ownership |
+| na@lead92corp.example | 45.0 | validity |
+| contact98@test.example | 45.0 | ownership |
+| asdf@lead99corp.example | 45.0 | validity |
+| xx@lead111corp.example | 45.0 | freshness |
+| contact112@test.example | 45.0 | validity |
+| contact123@domain.example | 45.0 | freshness |
+| unknown@lead128corp.example | 45.0 | freshness |
 
 ## Duplicate clusters
 
 | Type | Key | Records |
 |---|---|---|
-| exact_email | vivaan.saxena87@brahmaputralogistics.in | vivaan.saxena87@brahmaputralogistics.in, vivaan.saxena87@brahmaputralogistics.in, vivaan.saxena87@brahmaputralogistics.in |
-| exact_email | james.kowalski310@amberlineaerospace.com | james.kowalski310@amberlineaerospace.com, james.kowalski310@amberlineaerospace.com |
-| exact_email | ashley.pemberton37@norwoodtrailchemicals.com | ashley.pemberton37@norwoodtrailchemicals.com, ashley.pemberton37@norwoodtrailchemicals.com |
-| exact_email | tanvi.sharma84@yamunacoldchainsystems.in | tanvi.sharma84@yamunacoldchainsystems.in, tanvi.sharma84@yamunacoldchainsystems.in, tanvi.sharma84@yamunacoldchainsystems.in |
-| exact_email | rohit.ansari294@pinehollowdatasystems.com | rohit.ansari294@pinehollowdatasystems.com, rohit.ansari294@pinehollowdatasystems.com, rohit.ansari294@pinehollowdatasystems.com |
-| exact_email | sameer.nair289@kestrelpointbiotech.com | sameer.nair289@kestrelpointbiotech.com, sameer.nair289@kestrelpointbiotech.com, sameer.nair289@kestrelpointbiotech.com |
-| exact_email | karthik.chauhan144@redshalemanufacturing.com | karthik.chauhan144@redshalemanufacturing.com, karthik.chauhan144@redshalemanufacturing.com |
-| exact_email | aditya.saxena285@yamunacoldchainsystems.in | aditya.saxena285@yamunacoldchainsystems.in, aditya.saxena285@yamunacoldchainsystems.in |
-| exact_email | joshua.brennan194@cascaderidgefoods.com | joshua.brennan194@cascaderidgefoods.com, joshua.brennan194@cascaderidgefoods.com |
-| exact_email | arjun.kapoor328@amberlineaerospace.com | arjun.kapoor328@amberlineaerospace.com, arjun.kapoor328@amberlineaerospace.com, arjun.kapoor328@amberlineaerospace.com |
-| exact_email | nikhil.gupta498@amberlineaerospace.com | nikhil.gupta498@amberlineaerospace.com, nikhil.gupta498@amberlineaerospace.com |
-| exact_email | david.talbot373@vindhyachalceramics.com | david.talbot373@vindhyachalceramics.com, david.talbot373@vindhyachalceramics.com |
-| fuzzy_name_company | ashford / kestrel point biotech | rachel.ashford2@kestrelpointbiotech.com, laura.ashford360@outlook.com |
-| fuzzy_name_company | verma / chambal engineering works | rohit.verma3@chambalengineeringworks.in, kavya.verma75@chambalengineeringworks.in |
-| fuzzy_name_company | brennan / amberline aerospace | n.a.@lead4corp.com, michael.brennan15@amberlineaerospace.com, vivaan.saxena87@brahmaputralogistics.in |
-| fuzzy_name_company | bhatt / brightline analytics | contact6@example.com, rahul.bhatt361@brightlineanalytics.com |
-| fuzzy_name_company | gaines / brahmaputra logistics | ryan.gaines16@brahmaputralogistics.in, contact160@example.com |
-| fuzzy_name_company | kowalski / sterling bluff textiles | daniel.kowalski23@sterlingblufftextiles.com, ryan.kowalski348@sterlingblufftextiles.com |
-| fuzzy_name_company | fowler / norwood trail chemicals | michael.fowler24@norwoodtrailchemicals.com, asdf@lead99corp.com |
-| fuzzy_name_company | sharma / lucent grove media | sameer.sharma28@lucentgrovemedia.com, tanvi.sharma495@lucentgrovemedia.com |
-| fuzzy_name_company | krishnan / norwood trail chemicals | aryan.krishnan31@gmail.com, robert.krishnan436@gmail.com, pooja.krishnan461@norwoodtrailchemicals.com |
-| fuzzy_name_company | bhatt / amberline aerospace | karthik.bhatt32@amberlineaerospace.com, priya.bhatt312@amberlineaerospace.com |
-| fuzzy_name_company | bose / aravalli mineral processing | contact34@example.com, kavya.bose158@aravallimineralprocessing.in |
-| fuzzy_name_company | talbot / cascade ridge foods | james.kowalski310@amberlineaerospace.com, amanda.talbot347@cascaderidgefoods.com |
-| fuzzy_name_company | iyer / vantage crest capital | sameer.iyer36@vantagecrestcapital.com, tanvi.iyer445@vantagecrestcapital.com |
-| fuzzy_name_company | pemberton / aravalli mineral processing | michael.pemberton38@aravallimineralprocessing.in, nicole.pemberton73@aravallimineralprocessing.in |
-| fuzzy_name_company | gaines / yamuna cold chain systems | xxx@lead47corp.com, megan.gaines270@yamunacoldchainsystems.in |
-| fuzzy_name_company | pillai / deccan circuit systems | sameer.pillai52@deccancircuitsystems.com, rohit.pillai124@deccancircuitsystems.com |
-| fuzzy_name_company | hollis / driftwood kinetics | william.hollis54@driftwoodkinetics.com, matthew.hollis409@driftwoodkinetics.com |
-| fuzzy_name_company | donovan / wrenfield instruments | megan.donovan59@wrenfieldinstruments.com, andrew.donovan80@wrenfieldinstruments.com |
-| fuzzy_name_company | pemberton / brahmaputra logistics | ryan.pemberton60@brahmaputralogistics.in, emily.pemberton129@brahmaputralogistics.in |
-| fuzzy_name_company | brant / deccan circuit systems | robert.brant71@deccancircuitsystems.com, rachel.brant121@deccancircuitsystems.com |
-| fuzzy_name_company | blackwood / ashoka freight solutions | michael.blackwood74@ashokafreightsolutions.in, lead490@mailinator.com |
-| fuzzy_name_company | menon / thar renewable systems | sameer.menon79@tharrenewablesystems.com, rahul.menon195@tharrenewablesystems.com, rahul.menon420@tharrenewablesystems.com |
-| fuzzy_name_company | kapoor / rajdhani polymer industries | andrew.kapoor82@yahoo.com, riya.kapoor222@rajdhanipolymerindustries.in |
-| fuzzy_name_company | merritt / sterling bluff textiles | robert.merritt85@sterlingblufftextiles.com, david.merritt478@sterlingblufftextiles.com |
-| fuzzy_name_company | kapoor / aravalli mineral processing | arjun.kapoor90@yahoo.com, isha.kapoor381@aravallimineralprocessing.in |
-| fuzzy_name_company | iyer / ashoka freight solutions | riya.iyer91@ashokafreightsolutions.in, kavya.iyer333@ashokafreightsolutions.in |
-| fuzzy_name_company | saxena / deccan circuit systems | isha.saxena100@deccancircuitsystems.com, joshua.saxena364@gmail.com |
-| fuzzy_name_company | sharma / tanner bay materials | arjun.sharma103@yahoo.com, varun.sharma322@tannerbaymaterials.com |
-| fuzzy_name_company | chauhan / kestrel point biotech | priya.chauhan104@kestrelpointbiotech.com, nicole.chauhan244@yahoo.com |
-| fuzzy_name_company | kessler / nilgiri textiles | rohit.ansari294@pinehollowdatasystems.com, david.kessler488@nilgiritextiles.com |
-| fuzzy_name_company | sullivan / sahyadri industrial gases | rachel.sullivan110@sahyadriindustrialgases.com, rohit.ansari294@pinehollowdatasystems.com |
-| fuzzy_name_company | blackwood / ganges valley electronics | laura.blackwood127@gangesvalleyelectronics.in, william.blackwood265@gangesvalleyelectronics.in |
-| fuzzy_name_company | desai / aravalli mineral processing | unknown@lead128corp.com, ananya.desai156@aravallimineralprocessing.in |
-| fuzzy_name_company | merritt / cascade ridge foods | sarah.merritt131@outlook.com, nicole.merritt243@cascaderidgefoods.com |
-| fuzzy_name_company | joshi / driftwood kinetics | karthik.joshi150@driftwoodkinetics.com, tanvi.sharma84@yamunacoldchainsystems.in |
-| fuzzy_name_company | blackwood / satpura auto ancillaries | amanda.blackwood166@satpuraautoancillaries.com, james.blackwood192@satpuraautoancillaries.com |
-| fuzzy_name_company | blackwood / redshale manufacturing | contact171@example.com, ashley.blackwood261@redshalemanufacturing.com |
-| fuzzy_name_company | verma / kestrel point biotech | aditya.verma173@kestrelpointbiotech.com, isha.verma258@kestrelpointbiotech.com |
-| fuzzy_name_company | ferris / brahmaputra logistics | jessica.ferris175@brahmaputralogistics.in, michael.ferris376@brahmaputralogistics.in |
-| fuzzy_name_company | whitfield / brightline analytics | contact179@email.com, ashley.whitfield198@brightlineanalytics.com |
-| fuzzy_name_company | gupta / norwood trail chemicals | aditya.gupta184@norwoodtrailchemicals.com, rahul.gupta464@norwoodtrailchemicals.com |
-| fuzzy_name_company | malhotra / malabar agro exports | rohit.malhotra186@malabaragroexports.in, isha.malhotra460@malabaragroexports.in |
-| fuzzy_name_company | brennan / cascade ridge foods | joshua.brennan194@cascaderidgefoods.com, ryan.brennan349@cascaderidgefoods.com |
-| fuzzy_name_company | blackwood / chambal engineering works | joshua.blackwood196@chambalengineeringworks.in, amanda.blackwood358@chambalengineeringworks.in |
-| fuzzy_name_company | hargrove / thar renewable systems | jessica.hargrove197@tharrenewablesystems.com, rohit.hargrove307@outlook.com |
-| fuzzy_name_company | hargrove / ashoka freight solutions | ryan.hargrove201@outlook.com, megan.hargrove352@ashokafreightsolutions.in |
-| fuzzy_name_company | brennan / kestrel point biotech | ashley.brennan227@kestrelpointbiotech.com, david.brennan408@kestrelpointbiotech.com |
-| fuzzy_name_company | pillai / pinehollow data systems | varun.pillai230@pinehollowdatasystems.com, isha.pillai355@pinehollowdatasystems.com |
-| fuzzy_name_company | kowalski / godavari pharma components | ryan.kowalski238@godavaripharmacomponents.com, laura.kowalski252@godavaripharmacomponents.com, emily.kowalski256@godavaripharmacomponents.com, rachel.kowalski404@godavaripharmacomponents.com |
-| fuzzy_name_company | sullivan / tanner bay materials | sarah.sullivan247@tannerbaymaterials.com, laura.sullivan397@tannerbaymaterials.com |
-| fuzzy_name_company | naidu / yamuna cold chain systems | ananya.naidu257@yamunacoldchainsystems.in, unknown@lead371corp.com |
-| fuzzy_name_company | kapoor / konkan steelworks | riya.kapoor273@konkansteelworks.com, priya.kapoor465@konkansteelworks.com |
-| fuzzy_name_company | menon / copperlane industrial | ananya.menon279@copperlaneindustrial.com, vivaan.menon437@copperlaneindustrial.com, megan.menon479@gmail.com |
-| fuzzy_name_company | whitfield / konkan steelworks | lead280@mailinator.com, asdf@lead301corp.com, brittany.whitfield472@konkansteelworks.com |
-| fuzzy_name_company | joshi / fenwick alloy systems | lead306@mailinator.com, isha.joshi483@fenwickalloysystems.com |
-| fuzzy_name_company | kowalski / amberline aerospace | james.kowalski310@amberlineaerospace.com, brittany.kowalski446@amberlineaerospace.com |
-| fuzzy_name_company | gupta / sterling bluff textiles | arjun.gupta314@sterlingblufftextiles.com, vivaan.gupta389@sterlingblufftextiles.com |
-| fuzzy_name_company | hargrove / sterling bluff textiles | brittany.hargrove316@sterlingblufftextiles.com, amanda.hargrove357@sterlingblufftextiles.com |
-| fuzzy_name_company | ferris / fenwick alloy systems | sarah.ferris321@fenwickalloysystems.com, laura.ferris458@fenwickalloysystems.com |
-| fuzzy_name_company | talbot / vindhyachal ceramics | amanda.talbot331@vindhyachalceramics.com, david.talbot373@vindhyachalceramics.com, contact486@domain.com |
-| fuzzy_name_company | sharma / satpura auto ancillaries | rahul.sharma351@satpuraautoancillaries.com, sneha.sharma441@satpuraautoancillaries.com |
-| fuzzy_name_company | naidu / vantage crest capital | sneha.naidu379@vantagecrestcapital.com, sneha.naidu432@vantagecrestcapital.com |
-| fuzzy_name_company | bhatt / yamuna cold chain systems | sneha.bhatt387@yamunacoldchainsystems.in, varun.bhatt424@yamunacoldchainsystems.in |
-| fuzzy_name_company | gaines / chambal engineering works | not-an-email-394, laura.gaines452@chambalengineeringworks.in |
-| fuzzy_name_company | iyer / pinehollow data systems | lead395@mailinator.com, nikhil.iyer447@pinehollowdatasystems.com |
-| fuzzy_name_company | saxena / coromandel packaging | karthik.saxena396@coromandelpackagingco.in, divya.saxena415@coromandelpackagingco.in |
-| fuzzy_name_company | gupta / amberline aerospace | nikhil.gupta401@amberlineaerospace.com, nikhil.gupta498@amberlineaerospace.com |
-| fuzzy_name_company | bose / yamuna cold chain systems | divya.bose430@yamunacoldchainsystems.in, sneha.bose484@yamunacoldchainsystems.in |
+| exact_email | vivaan.saxena87@brahmaputralogistics.example | vivaan.saxena87@brahmaputralogistics.example, vivaan.saxena87@brahmaputralogistics.example, vivaan.saxena87@brahmaputralogistics.example |
+| exact_email | james.kowalski310@amberlineaerospace.example | james.kowalski310@amberlineaerospace.example, james.kowalski310@amberlineaerospace.example |
+| exact_email | ashley.pemberton37@norwoodtrailchemicals.example | ashley.pemberton37@norwoodtrailchemicals.example, ashley.pemberton37@norwoodtrailchemicals.example |
+| exact_email | tanvi.sharma84@yamunacoldchainsystems.example | tanvi.sharma84@yamunacoldchainsystems.example, tanvi.sharma84@yamunacoldchainsystems.example, tanvi.sharma84@yamunacoldchainsystems.example |
+| exact_email | rohit.ansari294@pinehollowdatasystems.example | rohit.ansari294@pinehollowdatasystems.example, rohit.ansari294@pinehollowdatasystems.example, rohit.ansari294@pinehollowdatasystems.example |
+| exact_email | sameer.nair289@kestrelpointbiotech.example | sameer.nair289@kestrelpointbiotech.example, sameer.nair289@kestrelpointbiotech.example, sameer.nair289@kestrelpointbiotech.example |
+| exact_email | karthik.chauhan144@redshalemanufacturing.example | karthik.chauhan144@redshalemanufacturing.example, karthik.chauhan144@redshalemanufacturing.example |
+| exact_email | aditya.saxena285@yamunacoldchainsystems.example | aditya.saxena285@yamunacoldchainsystems.example, aditya.saxena285@yamunacoldchainsystems.example |
+| exact_email | joshua.brennan194@cascaderidgefoods.example | joshua.brennan194@cascaderidgefoods.example, joshua.brennan194@cascaderidgefoods.example |
+| exact_email | arjun.kapoor328@amberlineaerospace.example | arjun.kapoor328@amberlineaerospace.example, arjun.kapoor328@amberlineaerospace.example, arjun.kapoor328@amberlineaerospace.example |
+| exact_email | nikhil.gupta498@amberlineaerospace.example | nikhil.gupta498@amberlineaerospace.example, nikhil.gupta498@amberlineaerospace.example |
+| exact_email | david.talbot373@vindhyachalceramics.example | david.talbot373@vindhyachalceramics.example, david.talbot373@vindhyachalceramics.example |
+| fuzzy_name_company | ashford / kestrel point biotech | rachel.ashford2@kestrelpointbiotech.example, laura.ashford360@outlook.example |
+| fuzzy_name_company | verma / chambal engineering works | rohit.verma3@chambalengineeringworks.example, kavya.verma75@chambalengineeringworks.example |
+| fuzzy_name_company | brennan / amberline aerospace | n.a.@lead4corp.example, michael.brennan15@amberlineaerospace.example, vivaan.saxena87@brahmaputralogistics.example |
+| fuzzy_name_company | bhatt / brightline analytics | contact6@example.example, rahul.bhatt361@brightlineanalytics.example |
+| fuzzy_name_company | gaines / brahmaputra logistics | ryan.gaines16@brahmaputralogistics.example, contact160@example.example |
+| fuzzy_name_company | kowalski / sterling bluff textiles | daniel.kowalski23@sterlingblufftextiles.example, ryan.kowalski348@sterlingblufftextiles.example |
+| fuzzy_name_company | fowler / norwood trail chemicals | michael.fowler24@norwoodtrailchemicals.example, asdf@lead99corp.example |
+| fuzzy_name_company | sharma / lucent grove media | sameer.sharma28@lucentgrovemedia.example, tanvi.sharma495@lucentgrovemedia.example |
+| fuzzy_name_company | krishnan / norwood trail chemicals | aryan.krishnan31@gmail.example, robert.krishnan436@gmail.example, pooja.krishnan461@norwoodtrailchemicals.example |
+| fuzzy_name_company | bhatt / amberline aerospace | karthik.bhatt32@amberlineaerospace.example, priya.bhatt312@amberlineaerospace.example |
+| fuzzy_name_company | bose / aravalli mineral processing | contact34@example.example, kavya.bose158@aravallimineralprocessing.example |
+| fuzzy_name_company | talbot / cascade ridge foods | james.kowalski310@amberlineaerospace.example, amanda.talbot347@cascaderidgefoods.example |
+| fuzzy_name_company | iyer / vantage crest capital | sameer.iyer36@vantagecrestcapital.example, tanvi.iyer445@vantagecrestcapital.example |
+| fuzzy_name_company | pemberton / aravalli mineral processing | michael.pemberton38@aravallimineralprocessing.example, nicole.pemberton73@aravallimineralprocessing.example |
+| fuzzy_name_company | gaines / yamuna cold chain systems | xxx@lead47corp.example, megan.gaines270@yamunacoldchainsystems.example |
+| fuzzy_name_company | pillai / deccan circuit systems | sameer.pillai52@deccancircuitsystems.example, rohit.pillai124@deccancircuitsystems.example |
+| fuzzy_name_company | hollis / driftwood kinetics | william.hollis54@driftwoodkinetics.example, matthew.hollis409@driftwoodkinetics.example |
+| fuzzy_name_company | donovan / wrenfield instruments | megan.donovan59@wrenfieldinstruments.example, andrew.donovan80@wrenfieldinstruments.example |
+| fuzzy_name_company | pemberton / brahmaputra logistics | ryan.pemberton60@brahmaputralogistics.example, emily.pemberton129@brahmaputralogistics.example |
+| fuzzy_name_company | brant / deccan circuit systems | robert.brant71@deccancircuitsystems.example, rachel.brant121@deccancircuitsystems.example |
+| fuzzy_name_company | blackwood / ashoka freight solutions | michael.blackwood74@ashokafreightsolutions.example, lead490@mailinator.example |
+| fuzzy_name_company | menon / thar renewable systems | sameer.menon79@tharrenewablesystems.example, rahul.menon195@tharrenewablesystems.example, rahul.menon420@tharrenewablesystems.example |
+| fuzzy_name_company | kapoor / rajdhani polymer industries | andrew.kapoor82@yahoo.example, riya.kapoor222@rajdhanipolymerindustries.example |
+| fuzzy_name_company | merritt / sterling bluff textiles | robert.merritt85@sterlingblufftextiles.example, david.merritt478@sterlingblufftextiles.example |
+| fuzzy_name_company | kapoor / aravalli mineral processing | arjun.kapoor90@yahoo.example, isha.kapoor381@aravallimineralprocessing.example |
+| fuzzy_name_company | iyer / ashoka freight solutions | riya.iyer91@ashokafreightsolutions.example, kavya.iyer333@ashokafreightsolutions.example |
+| fuzzy_name_company | saxena / deccan circuit systems | isha.saxena100@deccancircuitsystems.example, joshua.saxena364@gmail.example |
+| fuzzy_name_company | sharma / tanner bay materials | arjun.sharma103@yahoo.example, varun.sharma322@tannerbaymaterials.example |
+| fuzzy_name_company | chauhan / kestrel point biotech | priya.chauhan104@kestrelpointbiotech.example, nicole.chauhan244@yahoo.example |
+| fuzzy_name_company | kessler / nilgiri textiles | rohit.ansari294@pinehollowdatasystems.example, david.kessler488@nilgiritextiles.example |
+| fuzzy_name_company | sullivan / sahyadri industrial gases | rachel.sullivan110@sahyadriindustrialgases.example, rohit.ansari294@pinehollowdatasystems.example |
+| fuzzy_name_company | blackwood / ganges valley electronics | laura.blackwood127@gangesvalleyelectronics.example, william.blackwood265@gangesvalleyelectronics.example |
+| fuzzy_name_company | desai / aravalli mineral processing | unknown@lead128corp.example, ananya.desai156@aravallimineralprocessing.example |
+| fuzzy_name_company | merritt / cascade ridge foods | sarah.merritt131@outlook.example, nicole.merritt243@cascaderidgefoods.example |
+| fuzzy_name_company | joshi / driftwood kinetics | karthik.joshi150@driftwoodkinetics.example, tanvi.sharma84@yamunacoldchainsystems.example |
+| fuzzy_name_company | blackwood / satpura auto ancillaries | amanda.blackwood166@satpuraautoancillaries.example, james.blackwood192@satpuraautoancillaries.example |
+| fuzzy_name_company | blackwood / redshale manufacturing | contact171@example.example, ashley.blackwood261@redshalemanufacturing.example |
+| fuzzy_name_company | verma / kestrel point biotech | aditya.verma173@kestrelpointbiotech.example, isha.verma258@kestrelpointbiotech.example |
+| fuzzy_name_company | ferris / brahmaputra logistics | jessica.ferris175@brahmaputralogistics.example, michael.ferris376@brahmaputralogistics.example |
+| fuzzy_name_company | whitfield / brightline analytics | contact179@email.example, ashley.whitfield198@brightlineanalytics.example |
+| fuzzy_name_company | gupta / norwood trail chemicals | aditya.gupta184@norwoodtrailchemicals.example, rahul.gupta464@norwoodtrailchemicals.example |
+| fuzzy_name_company | malhotra / malabar agro exports | rohit.malhotra186@malabaragroexports.example, isha.malhotra460@malabaragroexports.example |
+| fuzzy_name_company | brennan / cascade ridge foods | joshua.brennan194@cascaderidgefoods.example, ryan.brennan349@cascaderidgefoods.example |
+| fuzzy_name_company | blackwood / chambal engineering works | joshua.blackwood196@chambalengineeringworks.example, amanda.blackwood358@chambalengineeringworks.example |
+| fuzzy_name_company | hargrove / thar renewable systems | jessica.hargrove197@tharrenewablesystems.example, rohit.hargrove307@outlook.example |
+| fuzzy_name_company | hargrove / ashoka freight solutions | ryan.hargrove201@outlook.example, megan.hargrove352@ashokafreightsolutions.example |
+| fuzzy_name_company | brennan / kestrel point biotech | ashley.brennan227@kestrelpointbiotech.example, david.brennan408@kestrelpointbiotech.example |
+| fuzzy_name_company | pillai / pinehollow data systems | varun.pillai230@pinehollowdatasystems.example, isha.pillai355@pinehollowdatasystems.example |
+| fuzzy_name_company | kowalski / godavari pharma components | ryan.kowalski238@godavaripharmacomponents.example, laura.kowalski252@godavaripharmacomponents.example, emily.kowalski256@godavaripharmacomponents.example, rachel.kowalski404@godavaripharmacomponents.example |
+| fuzzy_name_company | sullivan / tanner bay materials | sarah.sullivan247@tannerbaymaterials.example, laura.sullivan397@tannerbaymaterials.example |
+| fuzzy_name_company | naidu / yamuna cold chain systems | ananya.naidu257@yamunacoldchainsystems.example, unknown@lead371corp.example |
+| fuzzy_name_company | kapoor / konkan steelworks | riya.kapoor273@konkansteelworks.example, priya.kapoor465@konkansteelworks.example |
+| fuzzy_name_company | menon / copperlane industrial | ananya.menon279@copperlaneindustrial.example, vivaan.menon437@copperlaneindustrial.example, megan.menon479@gmail.example |
+| fuzzy_name_company | whitfield / konkan steelworks | lead280@mailinator.example, asdf@lead301corp.example, brittany.whitfield472@konkansteelworks.example |
+| fuzzy_name_company | joshi / fenwick alloy systems | lead306@mailinator.example, isha.joshi483@fenwickalloysystems.example |
+| fuzzy_name_company | kowalski / amberline aerospace | james.kowalski310@amberlineaerospace.example, brittany.kowalski446@amberlineaerospace.example |
+| fuzzy_name_company | gupta / sterling bluff textiles | arjun.gupta314@sterlingblufftextiles.example, vivaan.gupta389@sterlingblufftextiles.example |
+| fuzzy_name_company | hargrove / sterling bluff textiles | brittany.hargrove316@sterlingblufftextiles.example, amanda.hargrove357@sterlingblufftextiles.example |
+| fuzzy_name_company | ferris / fenwick alloy systems | sarah.ferris321@fenwickalloysystems.example, laura.ferris458@fenwickalloysystems.example |
+| fuzzy_name_company | talbot / vindhyachal ceramics | amanda.talbot331@vindhyachalceramics.example, david.talbot373@vindhyachalceramics.example, contact486@domain.example |
+| fuzzy_name_company | sharma / satpura auto ancillaries | rahul.sharma351@satpuraautoancillaries.example, sneha.sharma441@satpuraautoancillaries.example |
+| fuzzy_name_company | naidu / vantage crest capital | sneha.naidu379@vantagecrestcapital.example, sneha.naidu432@vantagecrestcapital.example |
+| fuzzy_name_company | bhatt / yamuna cold chain systems | sneha.bhatt387@yamunacoldchainsystems.example, varun.bhatt424@yamunacoldchainsystems.example |
+| fuzzy_name_company | gaines / chambal engineering works | not-an-email-394, laura.gaines452@chambalengineeringworks.example |
+| fuzzy_name_company | iyer / pinehollow data systems | lead395@mailinator.example, nikhil.iyer447@pinehollowdatasystems.example |
+| fuzzy_name_company | saxena / coromandel packaging | karthik.saxena396@coromandelpackagingco.example, divya.saxena415@coromandelpackagingco.example |
+| fuzzy_name_company | gupta / amberline aerospace | nikhil.gupta401@amberlineaerospace.example, nikhil.gupta498@amberlineaerospace.example |
+| fuzzy_name_company | bose / yamuna cold chain systems | divya.bose430@yamunacoldchainsystems.example, sneha.bose484@yamunacoldchainsystems.example |
 
 ## $-leak estimate
 
