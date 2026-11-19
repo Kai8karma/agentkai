@@ -27,8 +27,7 @@ code, and a surface for non-terminal roles.
   unless `--lan` is also passed.
 - `docs/TEAM-PLAYBOOK.md` — the daily/weekly/play loop doctrine (trigger,
   process, verify, stop) for all four roles.
-- Enterprise doc pack: `docs/PRD.md`, `docs/SUPPORT.md`, `PRIVACY.md`,
-  `SECURITY.md`, `LICENSE.md`, `docs/DPA-POSTURE.md`, this changelog.
+- `docs/SUPPORT.md` and this changelog.
 - `gtmos doctor` — security/environment preflight (python, claude CLI,
   masked token check, workspace, `~/.gtmos` permissions, writable cwd),
   `--json` for machines.
@@ -85,8 +84,6 @@ subcommands after this release.
   (`demo/demo-portal.json`) and generator script (`demo/generate_demo.py`)
   for a repeatable, fictional-data demo (grade C, 67.5 composite, 80
   duplicate clusters).
-- `docs/OFFER.md` — the $3,000 / 5-business-day CRM Integrity Audit offer,
-  guarantee ($30,000 recoverable pipeline or free), and free-teaser terms.
 - `plugin/` — a Claude Code plugin/skill distribution tier
   (`crm-integrity-audit` skill, marketplace manifest).
 
@@ -96,7 +93,7 @@ subcommands after this release.
   conflict-of-interest lane externalization. `--push` requires a human
   to type approval and `LINKEDIN_ACCESS_TOKEN`; with no live API call
   wired yet, it prints artifacts for manual import into Campaign
-  Manager (see `docs/linkedin-api-application.md`).
+  Manager.
 
 ## [0.1.0] — 2026-07-09 — self-hosted GTM OS CLI
 
@@ -125,6 +122,4 @@ established from commit one.
 - `docs/integrity-score-methodology.md` — the CRM Integrity Score
   published in full: dimension rubrics, duplicate-detection rules, the
   $-leak model and its stated assumptions.
-- `docs/COMPETITIVE.md` — the wedge/parity/deferred capability matrix
-  against Baseloop and Oxygen.
 - 18 tests, offline-capable (`tests/test_cli.py`, `tests/test_engine.py`).
