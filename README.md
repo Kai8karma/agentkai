@@ -1,6 +1,6 @@
 # Agent Kai
 
-Source for the Agent Kai website — GTM engineering as tested code.
+Source for the Agent Kai website: GTM engineering as tested code.
 
 **Live site:** https://kai8karma.github.io/agentkai/
 
@@ -12,19 +12,19 @@ Agent Kai runs a tested, deterministic GTM engine on a client's CRM to recover r
 |---|---|
 | `index.html`, `assets/` | Main site (pre-built static bundle) |
 | `gtmos/` | GTM OS product page, demo video and downloads (source tarball, concept note, sample report, team playbook) |
-| `tools/crm-data-quality-grader/` | Free CRM Data Quality Grader — scores a HubSpot or Salesforce export entirely in the browser; no data leaves the page |
+| `tools/crm-data-quality-grader/` | Free CRM Data Quality Grader. Scores a HubSpot or Salesforce export entirely in the browser. No data leaves the page |
 | `llms.txt` | Plain-text summary of the offer for AI answer engines |
 | `robots.txt`, `sitemap.xml`, `og.png`, `favicon.svg` | SEO and social metadata |
 
 ## Related repos
 
-- [kaikarma-gtm-engine](https://github.com/Kai8karma/kaikarma-gtm-engine) — the GTM engine itself (scoring, routing, paid control, tests)
-- [gtmos-mcp](https://github.com/Kai8karma/gtmos-mcp) — read-only CRM audit as an MCP server for Claude
-- [awesome-gtm-engineering](https://github.com/Kai8karma/awesome-gtm-engineering) — curated GTM engineering resources
+- [kaikarma-gtm-engine](https://github.com/Kai8karma/kaikarma-gtm-engine): the GTM engine itself (scoring, routing, paid control, tests)
+- [gtmos-mcp](https://github.com/Kai8karma/gtmos-mcp): read-only CRM audit as an MCP server for Claude
+- [awesome-gtm-engineering](https://github.com/Kai8karma/awesome-gtm-engineering): curated GTM engineering resources
 
 ## Running locally
 
-It's static — serve the folder with any web server:
+It's static. Serve the folder with any web server:
 
 ```bash
 python3 -m http.server 8000
